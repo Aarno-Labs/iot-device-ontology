@@ -2,7 +2,7 @@
     "num": 23,
     "services": [
         {
-            "confidence": 10,
+            "confidence": {"score": 10},
             "service": {"service": "service/1/"}
         }
     ]

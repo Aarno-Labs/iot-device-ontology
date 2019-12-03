@@ -1,0 +1,47 @@
+{
+    "hostnames": ["haccs-desktop"],
+    "possibleDevices": [
+        {
+            "device": "device/1/",
+            "confidence": {"score": 8}
+        },
+        {
+            "device": "device/2/",
+            "confidence": {"score": 3}
+        }
+    ],
+    "interfaces": [
+        {
+            "ipAddresses": [
+                {
+                    "ipv4": "128.6.21.6"
+                }
+            ],
+            "ports": [
+                {
+                    "num": 23,
+                    "services": [
+                        {
+                            "confidence": {"score": 10},
+                            "service": {"service": "service/1/"}
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "botnets": [
+        {
+            "confidence": {"score": 8},
+            "botnet": {
+                "software": "software/1/",
+                "versions": [
+                    {
+                        "begin": "1.0",
+                        "end": "1.0"
+                    }
+                ]
+            }
+        }
+    ]
+}
