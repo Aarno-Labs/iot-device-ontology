@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "versionInterval.json.schema",
+    "title": "An interval of versions",
+    "description": "",
+
+    "type": "object",
+
+    "properties": {
+        "begin": {"type": "string"},
+        "end": {"type": "string"},
+        "exclusiveBegin": {"type": "boolean"}, 
+        "exclusiveEnd": {"type": "boolean"}
+    },
+
+    "required": ["begin", "end"],
+    
+    "additionalProperties": false
+}

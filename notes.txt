@@ -1,0 +1,4 @@
+* Should ISA type be a tuple of arch,endianness,platform instead of
+  pk?  
+
+* Should devices in network be a reference or a list?

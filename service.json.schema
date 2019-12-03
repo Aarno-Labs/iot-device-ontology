@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "service.schema.json",
+    "title": "Service (without version)",
+    "description": "Service / Protocol",
+    "type": "object",
+
+    "required": ["name", "defaultPort", "serviceType"],
+    
+    "properties": {
+        "name": { "type": "string"},
+        "defaultPort": "num": {
+            "type": "integer",
+            "minimum": 0      
+            "maximum": 65535  
+        },  
+        "serviceType": {
+            "type": "string",
+            "format": "uri-reference",
+            "pattern": "servicetype/[0-9]+/"
+        }
+    }
+}

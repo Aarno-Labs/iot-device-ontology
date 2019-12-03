@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "serviceVersions.schema.json",
+    "title": "Versions of a service",
+    "description": "",
+    
+    "type": "object",
+    
+    "required": ["service"],
+    
+    "properties": {
+        "service": {
+            "type": "string",
+            "format": "uri-reference",
+            "pattern": "service/[0-9]+/"
+        },
+        "versions": {
+            "type": "array",
+            "items": {"$ref": "versionInterval.json.schema"},
+            "uniqueItems": true
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "softwareVersions.json.schema",
+    "title": "Versions of software CPE",
+    "description": "",
+
+    "type": "object",
+
+    "required": ["software", "versions"],
+    
+    "properties": {
+        "software": {
+            "type": "string",
+            "format": "uri-reference",
+            "pattern": "software/[0-9]+/"
+        },
+        "versions": {
+            "type": "array",
+            "items": {"$ref": "versionInterval.json.schema"},
+            "uniqueItems": true
+        }
+    }
+}

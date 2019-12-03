@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "host.schema.json",
+    "title": "HACCS Host Description Schema",
+    "description": "",
+    "type": "object",
+    
+    "properties": {
+        "hostnames": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "uniqueItems": true
+        },
+        "possibleDevices": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "device": {
+                        "type": "string",
+                        "format": "uri-reference",
+                        "pattern": "devicetype/[0-9]+/"
+                    },
+                    "confidence": {"$ref": "confidence.json.schema"}
+                },
+                "required": ["device", "confidence"]
+            }
+        },
+        "interfaces": {
+            "type": "array",
+            "items": {"$ref": "interface.json.schema"}
+        },
+        "botnets": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "botnet": {"$ref": "softwareVersions.json.schema"},
+                    "confidence": {"$ref": "confidence.json.schema"},
+                }
+                "required": ["botnet", "confidence"]
+            },
+        },
+        "status": { "enum": ["READY", "NOTREADY?"]},
+        "legal": { "type": "boolean" }
+    }
+}

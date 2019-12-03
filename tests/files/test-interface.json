@@ -1,0 +1,18 @@
+{
+    "ipAddresses": [
+        {
+            "ipv4": "128.6.21.6"
+        }
+    ],
+    "ports": [
+        {
+            "num": 23,
+            "services": [
+                {
+                    "confidence": 10,
+                    "service": {"service": "service/1/"}
+                }
+            ]
+        }
+    ]
+}

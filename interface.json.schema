@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "interface.schema.json",
+    "title": "Interface",
+    "description": "Interface of device or host",
+    "type": "object",
+
+    "properties": {
+        "mac": {
+            "type": "string",
+            "pattern": "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"
+        },
+        "ipAddresses": {
+            "type": "array",
+            "items": {"$ref": "ipAddress.json.schema"},
+            "uniqueItems": true
+        },
+        "ports": {
+            "type": "array",
+            "items": {"$ref": "port.json.schema"}
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "port.schema.json",
+    "title": "HACCS Port",
+    "description": "Port",
+    "type": "object",
+
+    "definitions": {
+        "confidence": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10
+        }
+    },
+
+    "required": ["num"],
+    
+    "properties" : {
+        "num": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+        },
+        "services": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "confidence": {"$ref": "#/definitions/confidence"},
+                    "service": {"$ref": "serviceVersions.json.schema"},
+                    "software": {"$ref": "softwareVersions.json.schema"}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "network.json.schema",
+    "title": "HACCS Network Description Schema",
+    "description": "",
+    "type": "object",
+    
+    "properties": {
+        "devices": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "device": {
+                        "type": "string",
+                        "format": "uri-reference",
+                        "pattern": "device/[0-9]+/"
+                    },
+                    "confidence": {"$ref": "confidence.json.schema"}
+                },
+                "required": ["device", "confidence"]
+            }
+        },
+        
+        "hosts": {
+            "type": "array",
+            "items": {"$ref": "host.json.schema"}
+        }
+    }
+}

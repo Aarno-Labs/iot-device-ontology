@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "device.schema.json",
+    "title": "HACCS Device",
+    "description": "Device and configuration",
+    "type": "object",
+
+    "required": ["manufacturer", "model"],
+    "properties" : {
+        "manufacturer": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        },
+        "versions": {"$ref": "versionInterval.json.schema"},
+        "isas": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "format": "uri-reference",
+                "pattern": "isatype/[0-9]+/"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+        },
+        "deviceType": {
+            "type": "string",
+            "format": "uri-reference",
+            "pattern": "devicetype/[0-9]+/"
+        },
+        "firmwares": {
+            "type": "array",
+            "items": {"$ref": "softwareVersions.json.schema"}
+        },
+        "operatingSystems": {
+            "type": "array",
+            "items": {"$ref": "softwareVersions.json.schema"}
+        },
+        "installedSoftware": {
+            "type": "array",
+            "items": {"$ref": "softwareVersions.json.schema"}
+        },
+        "interfaces": {
+            "type": "array",
+            "items": {"$ref": "interface.json.schema"}
+        }
+    }
+}   

@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ipAddress.schema.json",
+    "title": "HACCS IP Address",
+    "description": "",
+    "type": "object",
+
+    "properties": {
+        "ipv4": {"type": "string", "format": "ipv4"},
+        "ipv6": {"type": "string", "format": "ipv6"}
+    },
+    "additionalProperties": false,
+    "minProperties": 1,
+    "maxProperties": 1
+}

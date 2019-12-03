@@ -1,0 +1,35 @@
+{
+    "manufacturer": "manufacturer",
+    "model": "model",
+    "versions": {"begin": "1.0",
+                 "end": "2.0",
+                 "exclusiveEnd": true},
+    "isas": ["isatype/1/"],
+    "deviceType": "devicetype/1/",
+    "firmwares": [
+        {
+            "software": "software/1/",
+            "versions": [
+                {
+                    "begin": "1.0",
+                    "end": "2.0",
+                    "exclusiveEnd": true
+                }
+            ]
+        }
+        
+    ],
+    "operatingSystems": [
+        {
+            "software": "software/1/",
+            "versions": [
+                {
+                    "begin": "1.0",
+                    "end": "2.0",
+                    "exclusiveEnd": true
+                }
+            ]
+        }
+        
+    ]
+}
