@@ -19,8 +19,8 @@
                 "type": "object",
                 "properties": {
                     "confidence": {"$ref": "confidence.json.schema"},
-                    "service": {"$ref": "serviceVersions.json.schema"},
-                    "software": {"$ref": "softwareVersions.json.schema"}
+                    "serviceVersion": {"$ref": "serviceVersions.json.schema"},
+                    "softwareVersion": {"$ref": "softwareVersions.json.schema"}
                 }
             }
         }

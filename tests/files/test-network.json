@@ -1,0 +1,81 @@
+{
+    "devices": [
+        {
+            "device": "device/1/",
+            "confidence": {"score": 8}
+        },
+        {
+            "device": "device/2/",
+            "confidence": {"score": 9}
+        }
+    ],
+
+    "hosts": [
+        {
+            "status": "READY",
+            "legal": false,
+            "possibleDevices": [
+                {
+                    "device": "device/1/",
+                    "confidence": {"score": 8}
+                }
+            ],
+            "isa": [
+                {
+                    "isatype": "isatype/1/",
+                    "confidence": {"score": 9}
+                }
+            ],
+            "interfaces": [
+                {
+                    "ipAddresses": [
+                        {
+                            "ipv4": "157.245.139.170"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "num": 80,
+                            "services": [
+                                {
+                                    "serviceVersion": {
+                                        "service": "service/1/"
+                                    },
+                                    "confidence": {"score": 10}
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "botnets": [
+                {
+                    "softwareVersions": {
+                        "software": "software/10/",
+                        "versions": [
+                            {
+                                "begin": "1.0",
+                                "end": "1.2"
+                            }
+                        ]
+                    },
+                    "confidence": {"score": 8}
+                }
+            ],
+            "firmware": [
+                {
+                    "softwareVersions": {
+                        "software": "software/100/",
+                        "versions": [
+                            {
+                                "begin": "*",
+                                "end": "*"
+                            }
+                        ]
+                    },
+                    "confidence": {"score": 8}
+                }
+            ]
+        }
+    ]
+}

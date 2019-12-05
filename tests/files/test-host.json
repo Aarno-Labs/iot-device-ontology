@@ -33,7 +33,7 @@
     "botnets": [
         {
             "confidence": {"score": 8},
-            "botnet": {
+            "softwareVersions": {
                 "software": "software/1/",
                 "versions": [
                     {

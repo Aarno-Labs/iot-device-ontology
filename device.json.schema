@@ -37,7 +37,7 @@
             "type": "array",
             "items": {"$ref": "softwareVersions.json.schema"}
         },
-        "installedSoftware": {
+        "installedSoftwares": {
             "type": "array",
             "items": {"$ref": "softwareVersions.json.schema"}
         },

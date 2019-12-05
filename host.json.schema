@@ -30,6 +30,22 @@
             }
         },
 
+        "isa": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "isatype": {
+                        "type": "string",
+                        "format": "uri-reference",
+                        "pattern": "isatype/[0-9]+/"
+                    },
+                    "confidence": {"$ref": "confidence.json.schema"}
+                }
+            },
+            "uniqueItems": true
+        },
+
         "interfaces": {
             "type": "array",
             "items": {"$ref": "interface.json.schema"}
@@ -37,16 +53,24 @@
         
         "botnets": {
             "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "botnet": {"$ref": "softwareVersions.json.schema"},
-                    "confidence": {"$ref": "confidence.json.schema"}
-                },
-                "required": ["botnet", "confidence"]
-            }
+            "items": {"$ref": "softwareVersionConfidence.json.schema"}
         },
 
+        "firmware": {
+            "type": "array",
+            "items": {"$ref": "softwareVersionConfidence.json.schema"}
+        },
+        
+        "operatingSystem": {
+            "type": "array",
+            "items": {"$ref": "softwareVersionConfidence.json.schema"}
+        },
+        
+        "installedSoftwares": {
+            "type": "array",
+            "items": {"$ref": "softwareVersionConfidence.json.schema"}
+        },
+        
         "status": { "enum": ["READY", "NOTREADY?"]},
 
         "legal": { "type": "boolean" }
