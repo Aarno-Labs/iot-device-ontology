@@ -2,11 +2,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "host.schema.json",
     "title": "HACCS Host Description Schema",
-    "description": "",
+    "description": "A specific host on a network that could be some device.",
     "type": "object",
     
     "properties": {
         "hostnames": {
+            "description": "Hostnames of the device, if known.", 
             "type": "array",
             "items": {
                 "type": "string"
@@ -15,6 +16,7 @@
         },
         
         "possibleDevices": {
+            "description": "The set of possible devices this host could be, each with a confidence.", 
             "type": "array",
             "items": {
                 "type": "object",
@@ -31,6 +33,7 @@
         },
 
         "isa": {
+            "description": "The extra ISAs this host could support, with confidence, if ISA information embedded in possibleDevices is not adequate.", 
             "type": "array",
             "items": {
                 "type": "object",
@@ -47,26 +50,31 @@
         },
 
         "interfaces": {
+            "description": "The sensed interfaces (and thus ports and services) of this host.  This information overrides the interfaces of the factory configurations in possibleDevices.", 
             "type": "array",
             "items": {"$ref": "interface.json.schema"}
         },
         
         "botnets": {
+            "description": "The bots that could be running on the host.", 
             "type": "array",
             "items": {"$ref": "softwareVersionConfidence.json.schema"}
         },
 
         "firmware": {
+            "description": "The refined firmwares that could be running on this host.  The information takes precedent over firmwares in possibleDevices.", 
             "type": "array",
             "items": {"$ref": "softwareVersionConfidence.json.schema"}
         },
         
         "operatingSystem": {
+            "description": "The refined operating systems that could be running on this host.  The information takes precedent over operating systems in possibleDevices.", 
             "type": "array",
             "items": {"$ref": "softwareVersionConfidence.json.schema"}
         },
         
         "installedSoftwares": {
+            "description": "The refined installed software that could be running on this host.  The information takes precedent over installed software in possibleDevices.", 
             "type": "array",
             "items": {"$ref": "softwareVersionConfidence.json.schema"}
         },

@@ -7,6 +7,7 @@
     
     "properties": {
         "devices": {
+            "description": "A bag of devices that have been sensed on the target network",
             "type": "array",
             "items": {
                 "type": "object",
@@ -23,6 +24,7 @@
         },
         
         "hosts": {
+            "description": "Specific hosts (hostname, IPs) that have been sensed on the target network",
             "type": "array",
             "items": {"$ref": "host.json.schema"}
         }

@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "device.schema.json",
     "title": "HACCS Device",
-    "description": "Device and configuration",
+    "description": "A hardware part device and factory configuration(s)",
     "type": "object",
 
     "required": ["manufacturer", "model", "isa", "abi"],
@@ -15,11 +15,13 @@
         },
         "versions": {"$ref": "versionInterval.json.schema"},
         "isa": {
+            "description": "The ISA of the device.", 
             "type": "string",
             "format": "uri-reference",
             "pattern": "isatype/[0-9]+/"
         },
         "cpuFlags": {
+            "description": "Strings of CPU flags for the device.", 
             "type": "array",
             "items": {
                 "type": "string"
@@ -28,28 +30,34 @@
             "minItems": 1
         },  
         "deviceType": {
+            "description": "The type of this device, e.g., router, server, IoT, etc.", 
             "type": "string",
             "format": "uri-reference",
             "pattern": "devicetype/[0-9]+/"
         },
         "abi": {
+            "description": "The ABI that this device adheres to.", 
             "type": "string",
             "format": "uri-reference",
             "pattern": "abitype/[0-9]+/"
         },
         "firmwares": {
+            "description": "The firmwares and version that this device could be running.", 
             "type": "array",
             "items": {"$ref": "softwareVersions.json.schema"}
         },
         "operatingSystems": {
+            "description": "The operating systemst that this device could be running.", 
             "type": "array",
             "items": {"$ref": "softwareVersions.json.schema"}
         },
         "installedSoftwares": {
+            "description": "The software that could be installed on this device (from a factory configuration).", 
             "type": "array",
             "items": {"$ref": "softwareVersions.json.schema"}
         },
         "interfaces": {
+            "description": "The interfaces (and thus ports and services) that a factory configuration might have up.", 
             "type": "array",
             "items": {"$ref": "interface.json.schema"}
         }
