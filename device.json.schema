@@ -7,6 +7,11 @@
 
     "required": ["manufacturer", "model", "isa", "abi"],
     "properties" : {
+        "pk": {
+            "type": "integer",
+            "minimum": 0
+        },
+
         "manufacturer": {
             "type": "string"
         },

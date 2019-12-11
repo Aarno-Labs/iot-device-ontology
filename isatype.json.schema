@@ -9,7 +9,8 @@
 
     "properties": {
         "pk": {
-            "type": "integer"
+            "type": "integer",
+            "minimum": 0
         },
         
         "name": {
