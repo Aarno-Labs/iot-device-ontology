@@ -5,7 +5,7 @@
     "description": "Device and configuration",
     "type": "object",
 
-    "required": ["manufacturer", "model"],
+    "required": ["manufacturer", "model", "isa", "abi"],
     "properties" : {
         "manufacturer": {
             "type": "string"
@@ -14,20 +14,28 @@
             "type": "string"
         },
         "versions": {"$ref": "versionInterval.json.schema"},
-        "isas": {
+        "isa": {
+            "type": "string",
+            "format": "uri-reference",
+            "pattern": "isatype/[0-9]+/"
+        },
+        "cpuFlags": {
             "type": "array",
             "items": {
-                "type": "string",
-                "format": "uri-reference",
-                "pattern": "isatype/[0-9]+/"
+                "type": "string"
             },
             "uniqueItems": true,
             "minItems": 1
-        },
+        },  
         "deviceType": {
             "type": "string",
             "format": "uri-reference",
             "pattern": "devicetype/[0-9]+/"
+        },
+        "abi": {
+            "type": "string",
+            "format": "uri-reference",
+            "pattern": "abitype/[0-9]+/"
         },
         "firmwares": {
             "type": "array",

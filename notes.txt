@@ -1,3 +1,6 @@
+* Todo: isatype, exploittype, exploitstage1protocol, servicetype,
+  exploiteffect, privilegetype, devicetype, haccsperformer, 
+
 * Should ISA type be a tuple of arch,endianness,platform instead of
   pk?  
 

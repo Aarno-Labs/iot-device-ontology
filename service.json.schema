@@ -5,19 +5,38 @@
     "description": "Service / Protocol",
     "type": "object",
 
-    "required": ["name", "defaultPort", "serviceType"],
+    "required": ["name"],
     
     "properties": {
-        "name": { "type": "string"},
-        "defaultPort": "num": {
+        "pk": {
             "type": "integer",
-            "minimum": 0      
+            "minimum": 0
+        },
+
+        "name": { "type": "string"},
+
+        "defaultPort": {
+            "type": "integer",
+            "minimum": 0,
             "maximum": 65535  
-        },  
-        "serviceType": {
+        },
+
+        "transport": {
             "type": "string",
-            "format": "uri-reference",
-            "pattern": "servicetype/[0-9]+/"
+            "enum": ["AEP", "AH", "DCCP", "ESP", "FCP", "NetBIOS", "IL",
+                     "iSCSI", "NBF", "SCTP", "Sinec", "TUP", "SPX", "NBP", "TCP", "UDP"]
+        },
+
+        "internet": {
+            "type": "string",
+            "enum": ["CLNS", "DDP", "EGP", "EIGRP", "ICMP", "IGMP", "IPsec", "IPv4",
+                     "IPv6", "IPX", "OSPF", "PIM", "RIP", "WireGuard"]
+        },
+
+        "link": {
+            "type": "string"
         }
     }
 }
+
+

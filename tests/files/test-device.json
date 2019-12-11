@@ -4,7 +4,8 @@
     "versions": {"begin": "1.0",
                  "end": "2.0",
                  "exclusiveEnd": true},
-    "isas": ["isatype/1/"],
+    "isa": "isatype/1/",
+    "abi": "abitype/1/",
     "deviceType": "devicetype/1/",
     "firmwares": [
         {

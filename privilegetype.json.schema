@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "privilegetype.schema.json",
+    "title": "Privilege Type",
+    "description": "Privilege type",
+    "type": "object",
+
+    "required": ["name"],
+
+    "properties": {
+        "pk": {
+            "type": "integer"
+        },
+        
+        "name": {
+            "type": "string"
+        }
+    },
+    
+     "additionalProperties": false
+}
