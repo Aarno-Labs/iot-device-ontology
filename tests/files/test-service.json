@@ -1,5 +1,7 @@
 {
+    "pk": 1,
     "name": "HTTP",
     "defaultPort": 80,
-    "transport": "TCP"
+    "transport": ["TCP"],
+    "internet": ["IPv4", "IPv6"]
 }

@@ -22,15 +22,23 @@
         },
 
         "transport": {
-            "type": "string",
-            "enum": ["AEP", "AH", "DCCP", "ESP", "FCP", "NetBIOS", "IL",
-                     "iSCSI", "NBF", "SCTP", "Sinec", "TUP", "SPX", "NBP", "TCP", "UDP"]
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": ["AEP", "AH", "DCCP", "ESP", "FCP", "NetBIOS", "IL",
+                         "iSCSI", "NBF", "SCTP", "Sinec", "TUP", "SPX", "NBP", "TCP", "UDP"]
+            },
+            "uniqueItems": true
         },
 
         "internet": {
-            "type": "string",
-            "enum": ["CLNS", "DDP", "EGP", "EIGRP", "ICMP", "IGMP", "IPsec", "IPv4",
-                     "IPv6", "IPX", "OSPF", "PIM", "RIP", "WireGuard"]
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": ["CLNS", "DDP", "EGP", "EIGRP", "ICMP", "IGMP", "IPsec", "IPv4",
+                         "IPv6", "IPX", "OSPF", "PIM", "RIP", "WireGuard"]
+            },
+            "uniqueItems": true
         },
 
         "link": {
