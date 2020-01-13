@@ -32,6 +32,30 @@
             }
         },
 
+        "natInfo": {
+            "type": "array",
+            "description": "If this host is thought to be a NAT, relate information on each translated port.", 
+            "items": {
+                "type": "object",
+                "properties": {
+                    "portNum": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 65535
+                    },
+                    "device": {
+                        "type": "string",
+                        "format": "uri-reference",
+                        "pattern": "device/[0-9]+/"
+                    },
+                    "serviceVersion": {"$ref": "serviceVersions.json.schema"},
+                    "softwareVersion": {"$ref": "softwareVersions.json.schema"},
+                    "confidence": {"$ref": "confidence.json.schema"}
+                },
+                "required": ["portNum", "device", "confidence"]
+            }
+        },
+
         "isa": {
             "description": "The extra ISAs this host could support, with confidence, if ISA information embedded in possibleDevices is not adequate.", 
             "type": "array",

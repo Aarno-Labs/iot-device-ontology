@@ -52,7 +52,7 @@
             "items": {"$ref": "softwareVersions.json.schema"}
         },
         "operatingSystems": {
-            "description": "The operating systemst that this device could be running.", 
+            "description": "The operating systems that this device could be running.", 
             "type": "array",
             "items": {"$ref": "softwareVersions.json.schema"}
         },
