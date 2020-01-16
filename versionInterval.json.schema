@@ -7,13 +7,13 @@
     "type": "object",
 
     "properties": {
-        "begin": {"type": "string"},
-        "end": {"type": "string"},
-        "exclusiveBegin": {"type": "boolean"}, 
-        "exclusiveEnd": {"type": "boolean"}
+        "versionBegin": {"type": "string"},
+        "versionEnd": {"type": "string"},
+        "versionExclusiveBegin": {"type": "boolean"}, 
+        "versionExclusiveEnd": {"type": "boolean"}
     },
 
-    "required": ["begin", "end"],
+    "required": ["versionBegin", "versionEnd"],
     
     "additionalProperties": false
 }

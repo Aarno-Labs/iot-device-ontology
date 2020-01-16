@@ -14,7 +14,8 @@
         {
             "ipAddresses": [
                 {
-                    "ipv4": "128.6.21.6"
+                    "value": "128.6.21.6",
+                    "version": "4"
                 }
             ],
             "ports": [
@@ -35,12 +36,10 @@
             "confidence": {"score": 8},
             "softwareVersions": {
                 "software": "software/1/",
-                "versions": [
-                    {
-                        "begin": "1.0",
-                        "end": "1.0"
-                    }
-                ]
+                "versions": {
+                    "versionBegin": "1.0",
+                    "versionEnd": "1.0"
+                }
             }
         }
     ]

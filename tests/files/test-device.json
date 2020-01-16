@@ -1,36 +1,34 @@
 {
     "manufacturer": "manufacturer",
     "model": "model",
-    "versions": {"begin": "1.0",
-                 "end": "2.0",
-                 "exclusiveEnd": true},
+    "versions": {"versionBegin": "1.0",
+                 "versionEnd": "2.0",
+                 "versionExclusiveEnd": true},
     "isa": "isatype/1/",
     "abi": "abitype/1/",
     "deviceType": "devicetype/1/",
     "firmwares": [
         {
             "software": "software/1/",
-            "versions": [
-                {
-                    "begin": "1.0",
-                    "end": "2.0",
-                    "exclusiveEnd": true
-                }
-            ]
+            "versions":
+            {
+                "versionBegin": "1.0",
+                "versionEnd": "2.0",
+                "versionExclusiveEnd": true
+            }
         }
         
     ],
     "operatingSystems": [
         {
             "software": "software/1/",
-            "versions": [
-                {
-                    "begin": "1.0",
-                    "end": "2.0",
-                    "exclusiveEnd": true
-                }
-            ]
+            "versions": 
+            {
+                "versionBegin": "1.0",
+                "versionEnd": "2.0",
+                "versionExclusiveEnd": true
+            }
+            
         }
-        
     ]
 }

@@ -1,7 +1,8 @@
 {
     "ipAddresses": [
         {
-            "ipv4": "128.6.21.6"
+            "value": "128.6.21.6",
+            "version": "4"
         }
     ],
     "ports": [

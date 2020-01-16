@@ -14,10 +14,7 @@
             "format": "uri-reference",
             "pattern": "software/[0-9]+/"
         },
-        "versions": {
-            "type": "array",
-            "items": {"$ref": "versionInterval.json.schema"},
-            "uniqueItems": true
-        }
+        
+        "versions": {"$ref": "versionInterval.json.schema"}
     }
 }
