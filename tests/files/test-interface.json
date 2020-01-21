@@ -9,12 +9,12 @@
         {
             "num": 23,
             "confidence": {"score": 5},
-            "serviceVersion": {"service": "service/1/"}
+            "serviceVersions": {"service": "service/1/"}
         },
         {
             "num": 23,
             "confidence": {"score": 5},
-            "serviceVersion": {"service": "service/2/"}
+            "serviceVersions": {"service": "service/2/"}
         }
     ]
 }

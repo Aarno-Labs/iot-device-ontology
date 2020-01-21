@@ -37,7 +37,7 @@
                     "ports": [
                         {
                             "num": 80,
-                            "serviceVersion": {
+                            "serviceVersions": {
                                 "service": "service/1/"
                             },
                             "confidence": {"score": 10}

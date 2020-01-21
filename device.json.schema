@@ -66,5 +66,7 @@
             "type": "array",
             "items": {"$ref": "interface.json.schema"}
         }
-    }
+    },
+    
+    "additionalProperties": false
 }   

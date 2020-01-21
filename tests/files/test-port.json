@@ -1,7 +1,7 @@
 {
     "num": 23,
     "confidence": {"score": 10},
-    "serviceVersion": {
+    "serviceVersions": {
         "service": "service/1/",
         "versions": [
             {

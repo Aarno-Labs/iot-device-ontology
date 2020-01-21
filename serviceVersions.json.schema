@@ -19,5 +19,6 @@
             "items": {"$ref": "versionInterval.json.schema"},
             "uniqueItems": true
         }
-    }
+    },
+    "additionalProperties": false   
 }

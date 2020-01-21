@@ -19,5 +19,6 @@
             "type": "array",
             "items": {"$ref": "port.json.schema"}
         }
-    }
+    },
+    "additionalProperties": false
 }

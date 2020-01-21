@@ -14,8 +14,8 @@
             "maximum": 65535
         },
         "confidence": {"$ref": "confidence.json.schema"},
-        "serviceVersion": {"$ref": "serviceVersions.json.schema"},
-        "softwareVersion": {"$ref": "softwareVersions.json.schema"}
+        "serviceVersions": {"$ref": "serviceVersions.json.schema"},
+        "softwareVersions": {"$ref": "softwareVersions.json.schema"}
     },
     "additionalProperties": false
 }
