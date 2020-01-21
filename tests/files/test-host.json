@@ -24,12 +24,8 @@
                     "confidence": {"score": 10},
                     "serviceVersions": {
                         "service": "service/1/",
-                        "versions": [
-                            {
                                 "versionBegin": "1.0",
                                 "versionEnd": "2.0"
-                            }
-                        ]
                     }
                 }
             ]
@@ -40,10 +36,8 @@
             "confidence": {"score": 8},
             "softwareVersions": {
                 "software": "software/1/",
-                "versions": {
-                    "versionBegin": "1.0",
-                    "versionEnd": "1.0"
-                }
+                "versionBegin": "1.0",
+                "versionEnd": "1.0"
             }
         }
     ]

@@ -49,10 +49,8 @@
                 {
                     "softwareVersions": {
                         "software": "software/10/",
-                        "versions": {
-                                "versionBegin": "1.0",
-                                "versionEnd": "1.2"
-                        }
+                        "versionBegin": "1.0",
+                        "versionEnd": "1.2"
                     },
                     "confidence": {"score": 8}
                 }
@@ -61,10 +59,8 @@
                 {
                     "softwareVersions": {
                         "software": "software/100/",
-                        "versions": {
-                            "versionBegin": "*",
-                            "versionEnd": "*"
-                        }
+                        "versionBegin": "*",
+                        "versionEnd": "*"
                     },
                     "confidence": {"score": 8}
                 }

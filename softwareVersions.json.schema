@@ -3,10 +3,10 @@
     "$id": "softwareVersions.json.schema",
     "title": "Versions of software CPE",
     "description": "",
-
+    
     "type": "object",
-
-    "required": ["software", "versions"],
+    
+    "required": ["software", "versionBegin", "versionEnd"],
     
     "properties": {
         "software": {
@@ -14,7 +14,10 @@
             "format": "uri-reference",
             "pattern": "software/[0-9]+/"
         },
-        
-        "versions": {"$ref": "versionInterval.json.schema"}
-    }
+        "versionBegin": {"type": "string"},
+        "versionEnd": {"type": "string"},
+        "versionExclusiveBegin": {"type": "boolean"}, 
+        "versionExclusiveEnd": {"type": "boolean"}
+    },
+    "additionalProperties": false   
 }

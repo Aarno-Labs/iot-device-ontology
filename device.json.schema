@@ -18,7 +18,10 @@
         "model": {
             "type": "string"
         },
-        "versions": {"$ref": "versionInterval.json.schema"},
+        "versionBegin": {"type": "string"},
+        "versionEnd": {"type": "string"},
+        "versionExclusiveBegin": {"type": "boolean"}, 
+        "versionExclusiveEnd": {"type": "boolean"},
         "isa": {
             "description": "The ISA of the device.", 
             "type": "string",

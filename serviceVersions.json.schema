@@ -14,11 +14,10 @@
             "format": "uri-reference",
             "pattern": "service/[0-9]+/"
         },
-        "versions": {
-            "type": "array",
-            "items": {"$ref": "versionInterval.json.schema"},
-            "uniqueItems": true
-        }
+        "versionBegin": {"type": "string"},
+        "versionEnd": {"type": "string"},
+        "versionExclusiveBegin": {"type": "boolean"}, 
+        "versionExclusiveEnd": {"type": "boolean"}
     },
     "additionalProperties": false   
 }
