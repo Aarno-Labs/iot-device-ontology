@@ -1,9 +1,13 @@
 {
     "num": 23,
-    "services": [
-        {
-            "confidence": {"score": 10},
-            "service": {"service": "service/1/"}
-        }
-    ]
+    "confidence": {"score": 10},
+    "serviceVersion": {
+        "service": "service/1/",
+        "versions": [
+            {
+                "versionBegin": "1.0",
+                "versionEnd": "2.0"
+            }
+        ]
+    }
 }

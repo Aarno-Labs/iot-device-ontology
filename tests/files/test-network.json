@@ -37,14 +37,10 @@
                     "ports": [
                         {
                             "num": 80,
-                            "services": [
-                                {
-                                    "serviceVersion": {
-                                        "service": "service/1/"
-                                    },
-                                    "confidence": {"score": 10}
-                                }
-                            ]
+                            "serviceVersion": {
+                                "service": "service/1/"
+                            },
+                            "confidence": {"score": 10}
                         }
                     ]
                 }

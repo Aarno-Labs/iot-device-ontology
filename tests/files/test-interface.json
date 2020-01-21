@@ -8,12 +8,13 @@
     "ports": [
         {
             "num": 23,
-            "services": [
-                {
-                    "confidence": {"score": 10},
-                    "service": {"service": "service/1/"}
-                }
-            ]
+            "confidence": {"score": 5},
+            "serviceVersion": {"service": "service/1/"}
+        },
+        {
+            "num": 23,
+            "confidence": {"score": 5},
+            "serviceVersion": {"service": "service/2/"}
         }
     ]
 }

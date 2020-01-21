@@ -13,16 +13,9 @@
             "minimum": 0,
             "maximum": 65535
         },
-        "services": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "confidence": {"$ref": "confidence.json.schema"},
-                    "serviceVersion": {"$ref": "serviceVersions.json.schema"},
-                    "softwareVersion": {"$ref": "softwareVersions.json.schema"}
-                }
-            }
-        }
-    }
+        "confidence": {"$ref": "confidence.json.schema"},
+        "serviceVersion": {"$ref": "serviceVersions.json.schema"},
+        "softwareVersion": {"$ref": "softwareVersions.json.schema"}
+    },
+    "additionalProperties": false
 }
