@@ -2,11 +2,11 @@
     "devices": [
         {
             "device": "device/1/",
-            "confidence": {"score": 8}
+            "confidence": 8
         },
         {
             "device": "device/2/",
-            "confidence": {"score": 9}
+            "confidence": 9
         }
     ],
 
@@ -17,13 +17,13 @@
             "possibleDevices": [
                 {
                     "device": "device/1/",
-                    "confidence": {"score": 8}
+                    "confidence": 8
                 }
             ],
             "isa": [
                 {
                     "isatype": "isatype/1/",
-                    "confidence": {"score": 9}
+                    "confidence": 9
                 }
             ],
             "interfaces": [
@@ -38,9 +38,9 @@
                         {
                             "num": 80,
                             "serviceVersions": {
-                                "service": "service/1/"
+                                "service": "/Service/1/"
                             },
-                            "confidence": {"score": 10}
+                            "confidence": 10
                         }
                     ]
                 }
@@ -48,21 +48,21 @@
             "botnets": [
                 {
                     "softwareVersions": {
-                        "software": "software/10/",
+                        "software": "/Software/10/",
                         "versionBegin": "1.0",
                         "versionEnd": "1.2"
                     },
-                    "confidence": {"score": 8}
+                    "confidence": 8
                 }
             ],
             "firmware": [
                 {
                     "softwareVersions": {
-                        "software": "software/100/",
+                        "software": "/Software/100/",
                         "versionBegin": "*",
                         "versionEnd": "*"
                     },
-                    "confidence": {"score": 8}
+                    "confidence": 8
                 }
             ]
         }

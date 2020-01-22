@@ -12,10 +12,10 @@
         "software": {
             "type": "string",
             "format": "uri-reference",
-            "pattern": "software/[0-9]+/"
+            "pattern": ".*/Software/[0-9]+/"
         },
-        "versionBegin": {"type": "string"},
-        "versionEnd": {"type": "string"},
+        "versionBegin": {"type": ["string", "null"]},
+        "versionEnd": {"type": ["string", "null"]},
         "versionExclusiveBegin": {"type": "boolean"}, 
         "versionExclusiveEnd": {"type": "boolean"}
     },

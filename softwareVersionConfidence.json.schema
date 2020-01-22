@@ -8,7 +8,11 @@
     
     "properties": {
         "softwareVersions": {"$ref": "softwareVersions.json.schema"},
-        "confidence": {"$ref": "confidence.json.schema"}
+        "confidence": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10
+        }
     },
     "required": ["softwareVersions", "confidence"]
 }

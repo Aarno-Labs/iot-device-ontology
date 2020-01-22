@@ -1,26 +1,59 @@
 {
-    "manufacturer": "manufacturer",
-    "model": "model",
-    "versionBegin": "1.0",
-    "versionEnd": "2.0",
-    "versionExclusiveEnd": true,
-    "isa": "isatype/1/",
-    "abi": "abitype/1/",
-    "deviceType": "devicetype/1/",
+    "url": "http://127.0.0.1:8000/api/Device/3/",
     "firmwares": [
         {
-            "software": "software/1/",
             "versionBegin": "1.0",
             "versionEnd": "2.0",
-            "versionExclusiveEnd": true
+            "versionExclusiveBegin": false,
+            "versionExclusiveEnd": true,
+            "software": "http://127.0.0.1:8000/api/Software/2/"
         }
     ],
     "operatingSystems": [
         {
-            "software": "software/1/",
             "versionBegin": "1.0",
             "versionEnd": "2.0",
-            "versionExclusiveEnd": true
+            "versionExclusiveBegin": false,
+            "versionExclusiveEnd": true,
+            "software": "http://127.0.0.1:8000/api/Software/2/"
         }
-    ]
+    ],
+    "installedSoftwares": [],
+    "interfaces": [
+        {
+            "ipAddresses": [
+                {
+                    "value": "128.6.21.6",
+                    "version": "4"
+                }
+            ],
+            "ports": [
+                {
+                    "serviceVersions": {
+                        "versionExclusiveBegin": false,
+                        "versionExclusiveEnd": false,
+                        "service": "http://127.0.0.1:8000/api/Service/1/"
+                    },
+                    "softwareVersions": {
+                        "versionBegin": "1.0",
+                        "versionEnd": "2.0",
+                        "versionExclusiveBegin": false,
+                        "versionExclusiveEnd": true,
+                        "software": "http://127.0.0.1:8000/api/Software/2/"
+                    },
+                    "confidence": 5,
+                    "num": 23
+                }
+            ]
+        }
+    ],
+    "versionBegin": "1.0",
+    "versionEnd": "2.0",
+    "versionExclusiveBegin": false,
+    "versionExclusiveEnd": true,
+    "manufacturer": "manufacturer",
+    "model": "model",
+    "isa": "http://127.0.0.1:8000/api/ISAType/2/",
+    "deviceType": "http://127.0.0.1:8000/api/DeviceType/1/",
+    "abi": "http://127.0.0.1:8000/api/ABIType/1/"
 }

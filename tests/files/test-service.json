@@ -1,7 +1,12 @@
 {
-    "pk": 1,
+    "url": "http://127.0.0.1:8000/api/Service/1/",
+    "transport": [
+        "TCP"
+    ],
+    "internet": [
+        "IPv4",
+        "IPv6"
+    ],
     "name": "HTTP",
-    "defaultPort": 80,
-    "transport": ["TCP"],
-    "internet": ["IPv4", "IPv6"]
+    "defaultPort": 80
 }

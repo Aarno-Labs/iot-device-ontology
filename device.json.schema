@@ -7,11 +7,10 @@
 
     "required": ["manufacturer", "model", "isa", "abi"],
     "properties" : {
-        "pk": {
-            "type": "integer",
-            "minimum": 0
+        "url": {
+            "type": "string",
+            "format": "uri-reference"
         },
-
         "manufacturer": {
             "type": "string"
         },
@@ -26,7 +25,7 @@
             "description": "The ISA of the device.", 
             "type": "string",
             "format": "uri-reference",
-            "pattern": "isatype/[0-9]+/"
+            "pattern": ".*/ISAType/[0-9]+/"
         },
         "cpuFlags": {
             "description": "Strings of CPU flags for the device.", 
@@ -41,13 +40,13 @@
             "description": "The type of this device, e.g., router, server, IoT, etc.", 
             "type": "string",
             "format": "uri-reference",
-            "pattern": "devicetype/[0-9]+/"
+            "pattern": ".*/DeviceType/[0-9]+/"
         },
         "abi": {
             "description": "The ABI that this device adheres to.", 
             "type": "string",
             "format": "uri-reference",
-            "pattern": "abitype/[0-9]+/"
+            "pattern": ".*/ABIType/[0-9]+/"
         },
         "firmwares": {
             "description": "The firmwares and version that this device could be running.", 

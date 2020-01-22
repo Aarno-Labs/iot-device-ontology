@@ -8,9 +8,9 @@
     "required": ["cpeProduct", "cpeVendor", "cpePart"],
 
     "properties": {
-        "pk": {
-            "type": "integer",
-            "minimum": 0
+        "url": {
+            "type": "string",
+            "format": "uri-reference"
         },
         
         "cpeProduct": { "type": "string"},

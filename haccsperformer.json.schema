@@ -7,9 +7,9 @@
     "required": ["name", "ta"],
 
     "properties": {
-        "pk": {
-            "type": "integer",
-            "minimum": 0
+        "url": {
+            "type": "string",
+            "format": "uri-reference"
         },
         
         "name": {

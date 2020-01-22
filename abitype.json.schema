@@ -8,8 +8,9 @@
     "required": ["name"],
 
     "properties": {
-        "pk": {
-            "type": "integer"
+        "url": {
+            "type": "string",
+            "format": "uri-reference"
         },
         
         "name": {

@@ -17,7 +17,11 @@
                         "format": "uri-reference",
                         "pattern": "device/[0-9]+/"
                     },
-                    "confidence": {"$ref": "confidence.json.schema"}
+                    "confidence": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 10
+                    }
                 },
                 "required": ["device", "confidence"]
             }

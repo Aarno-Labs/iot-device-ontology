@@ -1,8 +1,8 @@
 {
     "num": 23,
-    "confidence": {"score": 10},
+    "confidence": 10,
     "serviceVersions": {
-        "service": "service/1/",
+        "service": "/Service/1/",
         "versionBegin": "1.0",
         "versionEnd": "2.0"
     }
