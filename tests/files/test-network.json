@@ -1,11 +1,11 @@
 {
     "devices": [
         {
-            "device": "device/1/",
+            "device": "00000000-0000-0000-0000-000000000004",
             "confidence": 8
         },
         {
-            "device": "device/2/",
+            "device": "00000000-0000-0000-0000-000000000005",
             "confidence": 9
         }
     ],
@@ -16,13 +16,13 @@
             "legal": false,
             "possibleDevices": [
                 {
-                    "device": "device/1/",
+                    "device": "00000000-0000-0000-0000-000000000004",
                     "confidence": 8
                 }
             ],
             "isa": [
                 {
-                    "isatype": "isatype/1/",
+                    "isatype": "00000000-0000-0000-0000-000000000006",
                     "confidence": 9
                 }
             ],
@@ -38,7 +38,7 @@
                         {
                             "num": 80,
                             "serviceVersions": {
-                                "service": "/Service/1/"
+                                "service": "00000000-0000-0000-0000-000000000008"
                             },
                             "confidence": 10
                         }
@@ -48,7 +48,7 @@
             "botnets": [
                 {
                     "softwareVersions": {
-                        "software": "/Software/10/",
+                        "software": "00000000-0000-0000-0000-000000000004",
                         "versionBegin": "1.0",
                         "versionEnd": "1.2"
                     },
@@ -58,7 +58,7 @@
             "firmware": [
                 {
                     "softwareVersions": {
-                        "software": "/Software/100/",
+                        "software": "00000000-0000-0000-0000-000000000004",
                         "versionBegin": "*",
                         "versionEnd": "*"
                     },

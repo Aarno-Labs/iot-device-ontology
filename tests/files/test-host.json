@@ -2,11 +2,11 @@
     "hostnames": ["haccs-desktop"],
     "possibleDevices": [
         {
-            "device": "device/1/",
+            "device": "00000000-0000-0000-0000-000000000001",
             "confidence": 8
         },
         {
-            "device": "device/2/",
+            "device": "00000000-0000-0000-0000-000000000002",
             "confidence": 3
         }
     ],
@@ -23,7 +23,7 @@
                     "num": 23,
                     "confidence": 10,
                     "serviceVersions": {
-                        "service": "/Service/1/",
+                        "service": "00000000-0000-0000-0000-000000000003",
                         "versionBegin": "1.0",
                         "versionEnd": "2.0"
                     }
@@ -35,7 +35,7 @@
         {
             "confidence": 8,
             "softwareVersions": {
-                "software": "/Software/1/",
+                "software": "00000000-0000-0000-0000-000000000004",
                 "versionBegin": "1.0",
                 "versionEnd": "1.0"
             }

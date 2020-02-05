@@ -6,6 +6,11 @@
     "type": "object",
     
     "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
         "devices": {
             "description": "A bag of devices that have been sensed on the target network",
             "type": "array",
@@ -14,8 +19,8 @@
                 "properties": {
                     "device": {
                         "type": "string",
-                        "format": "uri-reference",
-                        "pattern": "device/[0-9]+/"
+                        "format": "uuid",
+                        "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
                     },
                     "confidence": {
                         "type": "integer",

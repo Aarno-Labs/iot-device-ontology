@@ -2,7 +2,7 @@
     "num": 23,
     "confidence": 10,
     "serviceVersions": {
-        "service": "/Service/1/",
+        "service": "00000000-0000-0000-0000-000000000004",
         "versionBegin": "1.0",
         "versionEnd": "2.0"
     }

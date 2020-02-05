@@ -9,12 +9,12 @@
         {
             "num": 23,
             "confidence": 5,
-            "serviceVersions": {"service": "/Service/1/"}
+            "serviceVersions": {"service": "00000000-0000-0000-0000-000000000004"}
         },
         {
             "num": 23,
             "confidence": 5,
-            "serviceVersions": {"service": "/Service/2/"}
+            "serviceVersions": {"service": "00000000-0000-0000-0000-000000000005"}
         }
     ]
 }

@@ -1,12 +1,12 @@
 {
-    "url": "http://127.0.0.1:8000/api/Device/3/",
+    "uuid": "2e9c74d6-4f61-4fbb-80ad-6d992ff0bde4",
     "firmwares": [
         {
             "versionBegin": "1.0",
             "versionEnd": "2.0",
             "versionExclusiveBegin": false,
             "versionExclusiveEnd": true,
-            "software": "http://127.0.0.1:8000/api/Software/2/"
+            "software": "00000000-0000-0000-0000-000000000001"
         }
     ],
     "operatingSystems": [
@@ -15,7 +15,7 @@
             "versionEnd": "2.0",
             "versionExclusiveBegin": false,
             "versionExclusiveEnd": true,
-            "software": "http://127.0.0.1:8000/api/Software/2/"
+            "software": "00000000-0000-0000-0000-000000000001"
         }
     ],
     "installedSoftwares": [],
@@ -32,14 +32,14 @@
                     "serviceVersions": {
                         "versionExclusiveBegin": false,
                         "versionExclusiveEnd": false,
-                        "service": "http://127.0.0.1:8000/api/Service/1/"
+                        "service": "00000000-0000-0000-0000-000000000002"
                     },
                     "softwareVersions": {
                         "versionBegin": "1.0",
                         "versionEnd": "2.0",
                         "versionExclusiveBegin": false,
                         "versionExclusiveEnd": true,
-                        "software": "http://127.0.0.1:8000/api/Software/2/"
+                        "software": "00000000-0000-0000-0000-000000000001"
                     },
                     "confidence": 5,
                     "num": 23
@@ -53,7 +53,7 @@
     "versionExclusiveEnd": true,
     "manufacturer": "manufacturer",
     "model": "model",
-    "isa": "http://127.0.0.1:8000/api/ISAType/2/",
-    "deviceType": "http://127.0.0.1:8000/api/DeviceType/1/",
-    "abi": "http://127.0.0.1:8000/api/ABIType/1/"
+    "isa": "00000000-0000-0000-0000-000000000005",
+    "deviceType": "00000000-0000-0000-0000-000000000006",
+    "abi": "00000000-0000-0000-0000-000000000007"
 }

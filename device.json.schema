@@ -7,9 +7,10 @@
 
     "required": ["manufacturer", "model", "isa", "abi"],
     "properties" : {
-        "url": {
+        "uuid": {
             "type": "string",
-            "format": "uri-reference"
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
         "manufacturer": {
             "type": "string"
@@ -24,8 +25,8 @@
         "isa": {
             "description": "The ISA of the device.", 
             "type": "string",
-            "format": "uri-reference",
-            "pattern": ".*/ISAType/[0-9]+/"
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
         "cpuFlags": {
             "description": "Strings of CPU flags for the device.", 
@@ -39,14 +40,14 @@
         "deviceType": {
             "description": "The type of this device, e.g., router, server, IoT, etc.", 
             "type": "string",
-            "format": "uri-reference",
-            "pattern": ".*/DeviceType/[0-9]+/"
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
         "abi": {
             "description": "The ABI that this device adheres to.", 
             "type": "string",
-            "format": "uri-reference",
-            "pattern": ".*/ABIType/[0-9]+/"
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
         "firmwares": {
             "description": "The firmwares and version that this device could be running.", 

@@ -8,11 +8,12 @@
     "required": ["name"],
     
     "properties": {
-        "url": {
+        "uuid": {
             "type": "string",
-            "format": "uri-reference"
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
-
+        
         "name": { "type": "string"},
 
         "defaultPort": {
