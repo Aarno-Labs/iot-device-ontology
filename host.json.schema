@@ -58,8 +58,8 @@
                         "format": "uuid",
                         "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
                     },
-                    "serviceVersion": {"$ref": "serviceVersions.json.schema"},
-                    "softwareVersion": {"$ref": "softwareVersions.json.schema"},
+                    "serviceVersions": {"$ref": "serviceVersions.json.schema"},
+                    "softwareVersions": {"$ref": "softwareVersions.json.schema"},
                     "confidence": {
                         "type": "integer",
                         "minimum": 0,
@@ -103,13 +103,13 @@
             "items": {"$ref": "softwareVersionConfidence.json.schema"}
         },
 
-        "firmware": {
+        "firmwares": {
             "description": "The refined firmwares that could be running on this host.  The information takes precedent over firmwares in possibleDevices.", 
             "type": "array",
             "items": {"$ref": "softwareVersionConfidence.json.schema"}
         },
         
-        "operatingSystem": {
+        "operatingSystems": {
             "description": "The refined operating systems that could be running on this host.  The information takes precedent over operating systems in possibleDevices.", 
             "type": "array",
             "items": {"$ref": "softwareVersionConfidence.json.schema"}
