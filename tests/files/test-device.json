@@ -24,7 +24,7 @@
             "ipAddresses": [
                 {
                     "value": "128.6.21.6",
-                    "version": "4"
+                    "version": 4
                 }
             ],
             "ports": [

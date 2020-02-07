@@ -31,7 +31,7 @@
                     "ipAddresses": [
                         {
                             "value": "157.245.139.170",
-                            "version": "4"
+                            "version": 4
                         }
                     ],
                     "ports": [
