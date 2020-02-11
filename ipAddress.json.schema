@@ -15,5 +15,6 @@
             "enum": [4, 6]
         }
     },
+    "required": ["value", "version"],
     "additionalProperties": false
 }
