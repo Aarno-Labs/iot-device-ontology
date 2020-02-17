@@ -1,0 +1,232 @@
+{
+    "abiTypes": [
+        {
+            "uuid": "923fb80e-9f2f-4ede-9a29-2f562d56ea5e",
+            "name": "linux-i386"
+        }
+    ],
+    "deviceTypes": [
+        {
+            "uuid": "9dad1ad9-f9d7-4e46-9089-ddcaa6ed2628",
+            "name": "router"
+        },
+        {
+            "uuid": "237c5960-3a56-49fe-9a90-401b1d2a55b9",
+            "name": "IoT"
+        }
+    ],
+    "exploitEffects": [
+        {
+            "uuid": "6ab58bf2-2ede-4c0c-9fd2-3e76763e988b",
+            "name": "KILL_EXPLOITED_PROCESS"
+        }
+    ],
+    "exploitStage0Protocols": [
+        {
+            "uuid": "60510065-c8ab-4aa3-8425-5437bf275ef7",
+            "name": "HTTP"
+        },
+        {
+            "uuid": "1b4cb9eb-3ff8-46d3-88fa-92e3e365965d",
+            "name": "raw socket"
+        }
+    ],
+    "exploitTypes": [
+        {
+            "uuid": "a8a797cc-1f13-45ef-b5bd-42b523cd5bb7",
+            "name": "COMMAND INJECTION"
+        },
+        {
+            "uuid": "9086b5b2-7e2e-4d4b-a05e-cf25420fd536",
+            "name": "MEMORY CORRUPTION"
+        }
+    ],
+    "haccsPerformerTypes": [
+        {
+            "uuid": "3fe2ba8c-3412-41a0-ab6c-65cdd120bded",
+            "name": "Aarno",
+            "ta": 2
+        },
+        {
+            "uuid": "3c2a2521-9008-4040-9701-514d27efe60d",
+            "name": "ASU",
+            "ta": 2
+        }
+    ],
+    "isaTypes": [
+        {
+            "uuid": "bd7d8270-a12d-479e-a587-b9e7e7751acb",
+            "endianness": "little",
+            "name": "mipsel",
+            "compatibleWith": []
+        },
+        {
+            "uuid": "ac8d076d-c74a-4bd9-9ae9-9201269e4ad3",
+            "endianness": "little",
+            "name": "x86",
+            "compatibleWith": []
+        }
+    ],
+    "privilegeTypes": [
+        {
+            "uuid": "bcfb2410-261b-4d56-a37d-9139e5486607",
+            "name": "USER"
+        },
+        {
+            "uuid": "009b2ab9-0456-48a8-870d-75a9fbb99f08",
+            "name": "ROOT"
+        }
+    ],
+    "softwares": [
+        {
+            "uuid": "21a1ae75-7ded-4c2c-bb20-64097123e88e",
+            "cpeProduct": "dnsmasq",
+            "cpeVendor": "thekelleys",
+            "cpePart": "a"
+        }
+    ],
+    "services": [
+        {
+            "uuid": "e71926b5-fc98-416d-a9c4-2edb08a8f7a4",
+            "transport": [
+                "TCP"
+            ],
+            "internet": [
+                "IPv4",
+                "IPv6"
+            ],
+            "name": "HTTP",
+            "defaultPort": 80
+        }
+    ],
+    "devices": [
+        {
+            "uuid": "10522b58-7afa-4984-852a-b0907c29ec3c",
+            "firmwares": [],
+            "operatingSystems": [],
+            "installedSoftwares": [
+                {
+                    "versionBegin": "1.0",
+                    "versionEnd": "2.0",
+                    "versionExclusiveBegin": false,
+                    "versionExclusiveEnd": true,
+                    "software": "21a1ae75-7ded-4c2c-bb20-64097123e88e"
+                }
+            ],
+            "interfaces": [],
+            "versionExclusiveBegin": false,
+            "versionExclusiveEnd": false,
+            "manufacturer": "Netgear",
+            "model": "AC1450",
+            "isa": "bd7d8270-a12d-479e-a587-b9e7e7751acb",
+            "deviceType": "9dad1ad9-f9d7-4e46-9089-ddcaa6ed2628",
+            "abi": "923fb80e-9f2f-4ede-9a29-2f562d56ea5e"
+        }
+    ],
+    "exploits": [
+        {
+            "uuid": "ec0ae8fd-c94d-47df-88bb-84ba9b59775f",
+            "deviceTargets": [
+                {
+                    "writableDir": "/tmp",
+                    "wasTested": true,
+                    "device": "10522b58-7afa-4984-852a-b0907c29ec3c"
+                }
+            ],
+            "softwareTargets": [
+                {
+                    "serviceVersions": {
+                        "versionBegin": "1.0",
+                        "versionEnd": "2.0",
+                        "versionExclusiveBegin": false,
+                        "versionExclusiveEnd": false,
+                        "service": "e71926b5-fc98-416d-a9c4-2edb08a8f7a4"
+                    },
+                    "softwareVersions": {
+                        "versionBegin": "1.0",
+                        "versionEnd": "2.0",
+                        "versionExclusiveBegin": false,
+                        "versionExclusiveEnd": true,
+                        "software": "21a1ae75-7ded-4c2c-bb20-64097123e88e"
+                    },
+                    "port": 8080
+                }
+            ],
+            "sourceFile": "http://127.0.0.1:8000/uploads/actions/ec0ae8fd-c94d-47df-88bb-84ba9b59775f--2020-02-13_13-27-32_.bz2",
+            "name": "CVE-125",
+            "exploitSpecVersion": 1,
+            "successProbability": 1,
+            "author": "3fe2ba8c-3412-41a0-ab6c-65cdd120bded",
+            "exploitType": "9086b5b2-7e2e-4d4b-a05e-cf25420fd536",
+            "targetISA": "ac8d076d-c74a-4bd9-9ae9-9201269e4ad3",
+            "targetABI": "923fb80e-9f2f-4ede-9a29-2f562d56ea5e",
+            "stage0Protocol": "60510065-c8ab-4aa3-8425-5437bf275ef7",
+            "localPrivilegeRequired": "bcfb2410-261b-4d56-a37d-9139e5486607",
+            "landedPrivilegeLevel": "bcfb2410-261b-4d56-a37d-9139e5486607",
+            "effects": [
+                "6ab58bf2-2ede-4c0c-9fd2-3e76763e988b"
+            ]
+        },
+        {
+            "uuid": "622e8065-c4cd-4ee7-bace-b26524d9c619",
+            "deviceTargets": [],
+            "softwareTargets": [
+                {
+                    "serviceVersions": {
+                        "versionBegin": "1.0",
+                        "versionEnd": "2.0",
+                        "versionExclusiveBegin": false,
+                        "versionExclusiveEnd": false,
+                        "service": "e71926b5-fc98-416d-a9c4-2edb08a8f7a4"
+                    },
+                    "softwareVersions": {
+                        "versionBegin": "1.0",
+                        "versionEnd": "2.0",
+                        "versionExclusiveBegin": false,
+                        "versionExclusiveEnd": true,
+                        "software": "21a1ae75-7ded-4c2c-bb20-64097123e88e"
+                    },
+                    "port": 8080
+                }
+            ],
+            "sourceFile": "http://127.0.0.1:8000/uploads/actions/622e8065-c4cd-4ee7-bace-b26524d9c619--2020-02-13_13-25-50_.bz2",
+            "name": "CVE-124",
+            "exploitSpecVersion": 1,
+            "successProbability": 99,
+            "author": "3c2a2521-9008-4040-9701-514d27efe60d",
+            "exploitType": "a8a797cc-1f13-45ef-b5bd-42b523cd5bb7",
+            "targetISA": "bd7d8270-a12d-479e-a587-b9e7e7751acb",
+            "targetABI": "923fb80e-9f2f-4ede-9a29-2f562d56ea5e",
+            "stage0Protocol": "1b4cb9eb-3ff8-46d3-88fa-92e3e365965d",
+            "localPrivilegeRequired": "bcfb2410-261b-4d56-a37d-9139e5486607",
+            "landedPrivilegeLevel": "bcfb2410-261b-4d56-a37d-9139e5486607",
+            "effects": [
+                "6ab58bf2-2ede-4c0c-9fd2-3e76763e988b"
+            ]
+        },
+        {
+            "uuid": "52baed85-f244-4e5f-aa66-376d38096841",
+            "deviceTargets": [
+                {
+                    "writableDir": "/tmp",
+                    "wasTested": true,
+                    "device": "10522b58-7afa-4984-852a-b0907c29ec3c"
+                }
+            ],
+            "softwareTargets": [],
+            "sourceFile": "http://127.0.0.1:8000/uploads/actions/52baed85-f244-4e5f-aa66-376d38096841--2020-02-13_13-24-53_.bz2",
+            "name": "CVE-123",
+            "exploitSpecVersion": 1,
+            "successProbability": 90,
+            "author": "3fe2ba8c-3412-41a0-ab6c-65cdd120bded",
+            "exploitType": "9086b5b2-7e2e-4d4b-a05e-cf25420fd536",
+            "targetISA": "bd7d8270-a12d-479e-a587-b9e7e7751acb",
+            "targetABI": "923fb80e-9f2f-4ede-9a29-2f562d56ea5e",
+            "stage0Protocol": "60510065-c8ab-4aa3-8425-5437bf275ef7",
+            "localPrivilegeRequired": "bcfb2410-261b-4d56-a37d-9139e5486607",
+            "landedPrivilegeLevel": "009b2ab9-0456-48a8-870d-75a9fbb99f08",
+            "effects": []
+        }
+    ]
+}
+

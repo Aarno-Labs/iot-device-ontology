@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "worldmodel.schema.json",
+    "title": "HACCS World Model Description Schema",
+    "description": "Campaign world model that defines entities.",
+    "type": "object",
+
+    "additionalProperties": false,
+
+    "required": ["abiTypes", "deviceTypes", "exploitEffects", "exploitStage0Protocols",
+                 "exploitTypes", "haccsPerformerTypes", "isaTypes", "privilegeTypes",
+                 "softwares", "services", "devices", "exploits"],
+            
+    "properties": {
+        "abiTypes": {
+            "type": "array",
+            "items": {"$ref": "abitype.json.schema"}
+        },
+        
+        "deviceTypes": {
+            "type": "array",
+            "items": {"$ref": "devicetype.json.schema"}
+        },
+
+        "exploitEffects": {
+            "type": "array",
+            "items": {"$ref": "exploiteffect.json.schema"}
+        },
+
+        "exploitStage0Protocols": {
+            "type": "array",
+            "items": {"$ref": "exploitstage0protocol.json.schema"}
+        },
+
+        "exploitTypes": {
+            "type": "array",
+            "items": {"$ref": "exploittype.json.schema"}
+        },
+
+        "haccsPerformerTypes": {
+            "type": "array",
+            "items": {"$ref": "haccsperformer.json.schema"}
+        },
+
+        "isaTypes": {
+            "type": "array",
+            "items": {"$ref": "isatype.json.schema"}
+        },
+
+        "privilegeTypes": {
+            "type": "array",
+            "items": {"$ref": "privilegetype.json.schema"}
+        },
+
+        "softwares": {
+            "type": "array",
+            "items": {"$ref": "software.json.schema"}
+        },
+
+        "services": {
+            "type": "array",
+            "items": {"$ref": "service.json.schema"}
+        },
+
+        "devices": {
+            "type": "array",
+            "items": {"$ref": "device.json.schema"}
+        },
+
+        "exploits": {
+            "type": "array",
+            "items": {"$ref": "exploit.json.schema"}
+        }
+    }
+}

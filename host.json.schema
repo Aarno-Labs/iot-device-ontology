@@ -88,7 +88,8 @@
                     }
                 }
             },
-            "uniqueItems": true
+            "uniqueItems": true,
+            "required": ["isatype", "confidence"]
         },
 
         "interfaces": {
