@@ -8,4 +8,4 @@ def test_get_isatype():
     with open('tests/files/test-isatype.json') as json_file:
         json_data = json.load(json_file)
 
-        assert_valid_schema(json_data, 'isatype.json.schema')
+        assert_valid_schema(json_data, 'worldmodel/isatype.json.schema')

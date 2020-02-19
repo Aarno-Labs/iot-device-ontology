@@ -8,4 +8,4 @@ def test_get_port():
     with open('tests/files/test-port.json') as json_file:
         json_data = json.load(json_file)
 
-        assert_valid_schema(json_data, 'port.json.schema')
+        assert_valid_schema(json_data, 'worldmodel/port.json.schema')

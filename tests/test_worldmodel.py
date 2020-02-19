@@ -8,4 +8,4 @@ def test_get_worldmodel():
     with open('tests/files/test-worldmodel.json') as json_file:
         json_data = json.load(json_file)
 
-        assert_valid_schema(json_data, 'worldmodel.json.schema')
+        assert_valid_schema(json_data, 'worldmodel/worldmodel.json.schema')

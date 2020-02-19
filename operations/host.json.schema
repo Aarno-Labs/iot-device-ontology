@@ -58,8 +58,8 @@
                         "format": "uuid",
                         "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
                     },
-                    "serviceVersions": {"$ref": "serviceVersions.json.schema"},
-                    "softwareVersions": {"$ref": "softwareVersions.json.schema"},
+                    "serviceVersions": {"$ref": "../worldmodel/serviceVersions.json.schema"},
+                    "softwareVersions": {"$ref": "../worldmodel/softwareVersions.json.schema"},
                     "confidence": {
                         "type": "integer",
                         "minimum": 0,
@@ -95,31 +95,31 @@
         "interfaces": {
             "description": "The sensed interfaces (and thus ports and services) of this host.  This information overrides the interfaces of the factory configurations in possibleDevices.", 
             "type": "array",
-            "items": {"$ref": "interface.json.schema"}
+            "items": {"$ref": "../worldmodel/interface.json.schema"}
         },
         
         "botnets": {
             "description": "The bots that could be running on the host.", 
             "type": "array",
-            "items": {"$ref": "softwareVersionConfidence.json.schema"}
+            "items": {"$ref": "../worldmodel/softwareVersionConfidence.json.schema"}
         },
 
         "firmwares": {
             "description": "The refined firmwares that could be running on this host.  The information takes precedent over firmwares in possibleDevices.", 
             "type": "array",
-            "items": {"$ref": "softwareVersionConfidence.json.schema"}
+            "items": {"$ref": "../worldmodel/softwareVersionConfidence.json.schema"}
         },
         
         "operatingSystems": {
             "description": "The refined operating systems that could be running on this host.  The information takes precedent over operating systems in possibleDevices.", 
             "type": "array",
-            "items": {"$ref": "softwareVersionConfidence.json.schema"}
+            "items": {"$ref": "../worldmodel/softwareVersionConfidence.json.schema"}
         },
         
         "installedSoftwares": {
             "description": "The refined installed software that could be running on this host.  The information takes precedent over installed software in possibleDevices.", 
             "type": "array",
-            "items": {"$ref": "softwareVersionConfidence.json.schema"}
+            "items": {"$ref": "../worldmodel/softwareVersionConfidence.json.schema"}
         },
         
         "status": { "enum": ["READY", "NOTREADY?"]},

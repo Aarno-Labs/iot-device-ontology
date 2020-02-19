@@ -8,4 +8,4 @@ def test_get_network():
     with open('tests/files/test-network.json') as json_file:
         json_data = json.load(json_file)
 
-        assert_valid_schema(json_data, 'network.json.schema')
+        assert_valid_schema(json_data, 'operations/network.json.schema')

@@ -8,4 +8,4 @@ def test_get_host():
     with open('tests/files/test-host.json') as json_file:
         json_data = json.load(json_file)
 
-        assert_valid_schema(json_data, 'host.json.schema')
+        assert_valid_schema(json_data, 'operations/host.json.schema')

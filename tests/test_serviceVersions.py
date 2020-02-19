@@ -8,4 +8,4 @@ def test_get_serviceVersions():
     with open('tests/files/test-serviceVersion.json') as json_file:
         json_data = json.load(json_file)
 
-        assert_valid_schema(json_data, 'serviceVersions.json.schema')
+        assert_valid_schema(json_data, 'worldmodel/serviceVersions.json.schema')
