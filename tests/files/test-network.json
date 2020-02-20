@@ -55,7 +55,7 @@
                     "confidence": 8
                 }
             ],
-            "firmware": [
+            "firmwares": [
                 {
                     "softwareVersions": {
                         "software": "00000000-0000-0000-0000-000000000004",

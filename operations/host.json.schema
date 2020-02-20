@@ -11,6 +11,12 @@
             "format": "uuid",
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
+
+        "network": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
         
         "hostnames": {
             "description": "Hostnames of the device, if known.", 
@@ -125,5 +131,7 @@
         "status": { "enum": ["READY", "NOTREADY?"]},
 
         "legal": { "type": "boolean" }
-    }
+    },
+    
+    "additionalProperties": false  
 }

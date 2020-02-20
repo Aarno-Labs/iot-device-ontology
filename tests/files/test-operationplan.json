@@ -1,0 +1,41 @@
+{
+    "name": "Test",
+    "organization": "Darpa",
+    
+    "metadata": {
+        "This":"Can be anything"
+    },
+    
+    "whitelist":{
+        "networks": [
+                "e4bf6036-c0b2-43c8-b165-43eac7c7fd75",
+                "fe50170c-5dc4-4af0-8066-3ee72273784e"
+        ],
+        "devices":[
+            "2e9c74d6-4f61-4fbb-80ad-6d992ff0bde4"
+        ]
+    },
+    
+    "blacklist": {
+        "architectures": [
+            "00000000-0000-0000-0000-000000000004"
+        ]
+    },
+    
+    "policy": [
+        "EXAMPLE_LIST='10.1.2.0/24'",
+        "ASK EXPLOIT IF DEVICE IN WHITELIST",
+        "ASK SCAN_IPV6 ALWAYS",
+        "ALLOW SCAN_IPV4 IF IPV4 IN EXAMPLE_LIST"
+    ],
+    
+    "neutralizations": {
+        "on_infected":[
+            "KILL name='DGA.PY'", 
+            "FILE DELETE file='/home/*.py'"
+        ],
+        "on_gateway":[
+            "TRAFFIC_REDIRECT source='infected-host-uuid' dest='ANY' REDIRECT_TARGET='sinkhole.com'"
+        ]
+    }
+}
