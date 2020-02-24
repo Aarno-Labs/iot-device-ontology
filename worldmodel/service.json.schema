@@ -5,7 +5,7 @@
     "description": "Service / Protocol",
     "type": "object",
 
-    "required": ["name", "defaultPort"],
+    "required": ["name", "defaultPort", "uuid"],
     
     "properties": {
         "uuid": {

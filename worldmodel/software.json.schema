@@ -5,7 +5,7 @@
     "description": "Software CPE",
     "type": "object",
 
-    "required": ["cpeProduct", "cpeVendor", "cpePart"],
+    "required": ["cpeProduct", "cpeVendor", "cpePart", "uuid"],
 
     "properties": {
         "uuid": {

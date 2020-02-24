@@ -4,13 +4,18 @@ import jsonref
 from os.path import join, dirname
 from os import getcwd
 from jsonschema import validate
-
+from jsonschema.exceptions import ValidationError
+from jsonschema.exceptions import SchemaError
 
 def assert_valid_schema(data, schema_file):
     """ Checks whether the given data matches the schema """
 
     schema = _load_json_schema(schema_file)
-    return validate(data, schema)
+    try:
+        validate(data, schema)
+    except ValidationError as e:
+        print("Validation error: {}".format(e.message))
+        raise e
 
 
 def _load_json_schema(filename):

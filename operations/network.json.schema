@@ -4,6 +4,8 @@
     "title": "HACCS Network Description Schema",
     "description": "",
     "type": "object",
+
+    "required": ["uuid"],
     
     "properties": {
         "uuid": {

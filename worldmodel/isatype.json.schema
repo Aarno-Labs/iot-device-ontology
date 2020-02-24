@@ -5,7 +5,7 @@
     "description": "ISA type",
     "type": "object",
 
-    "required": ["name", "endianness"],
+    "required": ["name", "endianness", "uuid"],
 
     "properties": {
         "uuid": {

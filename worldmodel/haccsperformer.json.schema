@@ -4,7 +4,7 @@
     "title": "HACCS Performer",
     "type": "object",
 
-    "required": ["name", "ta"],
+    "required": ["name", "ta", "uuid"],
 
     "properties": {
         "uuid": {

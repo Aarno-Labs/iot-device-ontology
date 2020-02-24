@@ -4,6 +4,8 @@
     "title": "HACCS Host Description Schema",
     "description": "A specific host on a network that could be some device.",
     "type": "object",
+
+    "required": ["uuid"],
     
     "properties": {
         "uuid": {

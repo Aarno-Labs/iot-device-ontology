@@ -5,7 +5,7 @@
     "description": "A hardware part device and factory configuration(s)",
     "type": "object",
 
-    "required": ["manufacturer", "model", "isa", "abi"],
+    "required": ["manufacturer", "model", "isa", "abi", "uuid"],
     "properties" : {
         "uuid": {
             "type": "string",
