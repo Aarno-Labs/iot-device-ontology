@@ -1,4 +1,5 @@
 {
+    "uuid": "00000000-0000-0000-0000-000000000009",
     "name": "MIPS1",
     "endianness": "little",
     "compatibleWith": [
