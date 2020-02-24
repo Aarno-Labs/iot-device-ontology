@@ -11,7 +11,7 @@ from jsonschema.exceptions import SchemaError
 
 def usage():
     print("JSON-Schema Validator: validate json file from stdin against schema.")
-    print("    usage: {} SCHEMA_FILE.json".format(sys.argv[0]))
+    print("    usage: {} SCHEMA_FILE JSON_FILE".format(sys.argv[0]))
 
 def load_json_schema(filename):
     """ Loads the given schema file """
@@ -43,20 +43,24 @@ def main():
     # This expects a schema file as an argument, and the json file
     # in stdin
 
-    if len(sys.argv) != 2:
-        print("Error: Exactly one schema file required.")
+    if len(sys.argv) != 3:
+        print("Error: Wrong number of command line args.")
         usage()
         sys.exit(1)
-          
-    # read json string from stdin
-    json_str = sys.stdin.read()
+    
     # validate it is valid json
     try:
-        json_data = json.loads(json_str)
-    except ValueError as err:
-        print("Error parsing json: ", err)
+        with open(sys.argv[2]) as json_file:
+            try:
+                json_data = json.load(json_file)
+            except ValueError as err:
+                print("Error parsing json: ", err)
+                sys.exit(1)
+    except IOError as x:
+        print("Error: Could not open or parse json file:", x)
+        usage()
         sys.exit(1)
-
+    
     assert_valid_schema(json_data, sys.argv[1])
         
     sys.exit(0)
