@@ -25,14 +25,15 @@
             "items": {"$ref": "network.json.schema"}
         },
         
-        "whitelist": {"$ref": "whiteblacklist.json.schema"},
+        "whitelist": {"$ref": "target-list.json.schema"},
 
-        "blacklist": {"$ref": "whiteblacklist.json.schema"},
+        "blacklist": {"$ref": "target-list.json.schema"},
 
         "policy": {
             "type": "array",
             "items": {
-                "type": "string"
+                "type": "string",
+                "pattern": "^(ALLOW|DENY) (EXPLOIT|SCAN_IP|NEUTRALIZE|ALL) (WHITELIST|BLACKLIST)$"
             }
         },
         
@@ -41,16 +42,12 @@
             "properties": {
                 "on_infected": {
                     "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
+                    "items": {"$ref": "neutralization.json.schema"}
                 },
                 
                 "on_gateway": {
                     "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
+                    "items": {"$ref": "neutralization.json.schema"}
                 }
             },
             

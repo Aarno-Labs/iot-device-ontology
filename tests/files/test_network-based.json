@@ -1,0 +1,9 @@
+{
+    "action": "NETWORK",
+    "type": "TRAFFIC_REDIRECT",
+    "source": ["10.0.1.23/32"],
+    "dest": ["e4bf6036-c0b2-43c8-b165-43eac7c7fd75"],
+    "redirection_target": "8.8.8.8",
+    "protocol": "UDP",
+    "dport": 53
+}

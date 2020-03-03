@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "whiteblacklist.json.schema",
-    "title": "HACCS White/Black List Sub-Schema",
+    "$id": "target-lists.json.schema",
+    "title": "HACCS Policy Target List Sub-Schema",
     "description": "",
     "type": "object",
 
@@ -24,7 +24,8 @@
                 "ipv4": {
                     "type": "array",
                     "items": {
-                        "type": "string"
+                        "type": "string",
+                        "pattern": "^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$"
                     }
                 },
                 "ipv6": {
