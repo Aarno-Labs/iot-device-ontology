@@ -18,6 +18,9 @@
     },
     
     "blacklist": {
+        "hosts": [
+            "e4bf6036-c0b2-43c8-b165-43eac7c7fd75"
+        ],
         "architectures": [
             "00000000-0000-0000-0000-000000000004"
         ],
@@ -30,9 +33,10 @@
     },
     
     "policy": [
-        "ALLOW EXPLOIT WHITELIST",
-        "ALLOW ALL WHITELIST",
-        "DENY SCAN_IP BLACKLIST"
+        "DENY ALL ALWAYS",
+        "ALLOW ALL IF DEVICE IN WHITELIST",
+        "ALLOW ALL IF IP IN WHITELIST",
+        "ALLOW ALL IF HOST IN WHITELIST"
     ],
     
     "neutralizations": {

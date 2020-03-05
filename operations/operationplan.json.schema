@@ -33,7 +33,7 @@
             "type": "array",
             "items": {
                 "type": "string",
-                "pattern": "^(ALLOW|DENY) (EXPLOIT|SCAN_IP|NEUTRALIZE|ALL) (WHITELIST|BLACKLIST)$"
+                "pattern": "^(ALLOW|DENY) (EXPLOIT|SCAN_IP|NEUTRALIZE|ALL) (ALWAYS|(IF (IP|NETWORK|DEVICE|SERVICE|EXPLOIT|ARCHITECTURE|PORT|HOST) IN (BLACKLIST|WHITELIST)))$"
             }
         },
         
