@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "agent-removal-event.schema.json",
+    "title": "Agent Removal Event",
+    "description": "Agent Removal Event in HIKE Management API",
+    "type": "object",
+
+    "required": ["host", "agent", "reason", "timeOfRemoval"],
+    
+    "properties": {
+        "host": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+        "agent": {
+            "type": "string"
+        },
+        "reason": {
+            "type": "string"
+        },
+        "timeOfRemoval": {
+            "type": "integer",
+            "minimum": 0
+        }
+    },
+
+    "additionalProperties": false  
+}
