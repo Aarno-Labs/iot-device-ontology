@@ -1,27 +1,24 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "agent-removal-event.schema.json",
-    "title": "Agent Removal Event",
-    "description": "Agent Removal Event in HIKE Management API",
+    "$id": "agent-spawn.schema.json",
+    "title": "Agent Spawn Event",
+    "description": "Agent Spawn Event in HIKE Management API",
     "type": "object",
 
-    "required": ["host", "agent", "reason", "timeOfRemoval"],
+    "required": ["parent", "host", "timeOfSpawn"],
 
     "properties": {
+        "parent": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
         "host": {
             "type": "string",
             "format": "uuid",
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
-        "agent": {
-            "type": "string",
-            "format": "uuid",
-            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
-        },
-        "reason": {
-            "type": "string"
-        },
-        "timeOfRemoval": {
+        "timeOfSpawn": {
             "type": "integer",
             "minimum": 0
         }
