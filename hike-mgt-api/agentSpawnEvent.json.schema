@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "agent-spawn.schema.json",
+    "title": "Agent Spawn Event",
+    "description": "Agent Spawn Event in HIKE Management API",
+    "type": "object",
+
+    "required": ["parent", "host", "timeOfSpawn"],
+
+    "properties": {
+        "parent": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+        "host": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+        "timeOfSpawn": {
+            "type": "integer",
+            "minimum": 0
+        }
+    },
+
+    "additionalProperties": false
+}
