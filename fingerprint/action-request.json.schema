@@ -22,9 +22,13 @@
             "then": {
                 "additionalProperties": false,
 
-                "required": ["fingerprintUUID", "actionID", "action"],
+                "required": ["messageType", "fingerprintUUID", "actionID", "action"],
 
                 "properties" : {
+                    "messageType": {
+                        "enum": ["ACTION_REQUEST"]
+                    },
+                    
                     "action": {
                         "type": "string",
                         "enum": ["PASSIVE"]
@@ -77,9 +81,14 @@
             "then": {
                 "additionalProperties": false,
 
-                "required": ["fingerprintUUID", "actionID", "action",  "protocol", "port", "timeoutMillisecs"],
+                "required": ["messageType", "fingerprintUUID", "actionID", "action",
+                             "protocol", "port", "timeoutMillisecs"],
                 
                 "properties" : {
+                    "messageType": {
+                        "enum": ["ACTION_REQUEST"]
+                    },
+                    
                     "action": {
                         "type": "string",
                         "enum": ["ACTIVE"]

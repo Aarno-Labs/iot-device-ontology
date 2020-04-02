@@ -5,9 +5,13 @@
     "description": "HACCS Fingerprint Request from Agent to RFC",
     "type": "object",
 
-    "required": ["agentUUID", "fingerprintUUID", "fingerprintMethods", "targetIP"],
+    "required": ["messageType", "agentUUID", "fingerprintUUID", "fingerprintMethods", "targetIP"],
     
     "properties": {
+        "messageType": {
+            "enum": ["FINGERPRINT_REQUEST"]
+        },
+        
         "agentUUID": {
             "type": "string",
             "format": "uuid",

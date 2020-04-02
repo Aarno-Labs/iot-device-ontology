@@ -5,9 +5,13 @@
     "description": "Agent Response for network action to RFC",
     "type": "object",
 
-    "required": ["fingerprintUUID", "actionID"],
+    "required": ["messageType", "fingerprintUUID", "actionID"],
     
     "properties": {
+        "messageType": {
+            "enum": ["ACTION_RESPONSE"]
+        },
+
         "fingerprintUUID": {
             "type": "string",
             "format": "uuid",
@@ -45,9 +49,7 @@
         "errorMsg": {
             "type": "string"
         }
-    },
-
-    "additionalProperties": false
+    }
 }
             
 

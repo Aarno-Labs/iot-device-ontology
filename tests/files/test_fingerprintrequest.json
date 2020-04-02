@@ -1,4 +1,5 @@
 {
+    "messageType": "FINGERPRINT_REQUEST",
     "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
     "agentUUID": "00000000-0000-0000-0000-0000000000A0",
     "fingerprintMethods": ["ACTIVE", "PASSIVE"],

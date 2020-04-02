@@ -1,12 +1,14 @@
 {
+    "messageType": "HIKE_RESPONSE",
     "hikeMessageUUID": "90704491-690a-405a-b938-69bc60f705e2",
     "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
     "agentUUID": "00000000-0000-0000-0000-0000000000A0",
     
-    "type": "RESPONSE_ACTIONS",
+    "responseType": "RESPONSE_ACTIONS",
 
     "actionsToPerform": [
         {
+            "messageType": "ACTION_REQUEST",
             "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
             "actionID": 1,
             "action": "ACTIVE",

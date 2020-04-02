@@ -1,7 +1,8 @@
 {
+    "messageType": "HIKE_REQUEST",
     "hikeMessageUUID": "90704491-690a-405a-b938-69bc60f705e2",
-
     "fingerprintRequest": {
+        "messageType": "FINGERPRINT_REQUEST",
         "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
         "agentUUID": "00000000-0000-0000-0000-0000000000A0",
         "fingerprintMethods": ["ACTIVE", "PASSIVE"],
@@ -21,6 +22,7 @@
 
     "priorActionRequests": [
         {
+            "messageType": "ACTION_REQUEST",
             "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
             "actionID": 1,
             "action": "ACTIVE",
@@ -37,6 +39,7 @@
 
     "priorActionResponses": [
         {
+            "messageType": "ACTION_RESPONSE",
             "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
             "actionID": 1,
             "protocol": "TCP",
