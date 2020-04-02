@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "action-response.json.schema",
+    "title": "HACCS Fingerprint Action Response",
+    "description": "Agent Response for network action to RFC",
+    "type": "object",
+
+    "required": ["fingerprintUUID", "actionID"],
+    
+    "properties": {
+        "fingerprintUUID": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+        
+        "actionID": {
+            "type": "integer"
+        },
+
+        "protocol": {
+            "type": "string",
+            "enum": ["MDNS", "UPNP", "TCP", "UDP"]
+        },
+
+        "base64Response": {
+            "type": "string"
+        },
+
+        "ip":  {"$ref": "../worldmodel/ipAddress.json.schema"},
+
+        "port": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+        },
+        
+        "errorCode": {
+            "type": "string",
+            "enum": ["TIMEOUT", "CONN_REFUSED", "NET_UNREACHABLE", "HOST_UNREACHABLE",
+                     "NOT_SUPPORTED", "NO_PERM", "PORT_UNREACHABLE", "TRY_AGAIN", "UNKNOWN"],
+            "description": "Absence of errorCode field means success"
+        },
+
+        "errorMsg": {
+            "type": "string"
+        }
+    },
+
+    "additionalProperties": false
+}
+            
+
+
+    
+

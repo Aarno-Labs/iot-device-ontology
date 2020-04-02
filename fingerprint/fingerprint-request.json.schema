@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fingerprint-request.json.schema",
+    "title": "HACCS Fingerprint Request from Agent to RFC",
+    "description": "HACCS Fingerprint Request from Agent to RFC",
+    "type": "object",
+
+    "required": ["agentUUID", "fingerprintUUID", "fingerprintMethods", "targetIP"],
+    
+    "properties": {
+        "agentUUID": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+        
+        "fingerprintUUID": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+
+        "fingerprintMethods": {
+            "type": "array",
+            "items": {
+                "enum": ["ACTIVE", "PASSIVE"]
+            },
+            "uniqueItems": true
+        },
+
+        "targetIP": {"$ref": "../worldmodel/ipAddress.json.schema"},
+
+        "targetMAC": {
+            "type": "string",
+            "pattern": "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"
+        },
+
+        "gatewayIP": {"$ref": "../worldmodel/ipAddress.json.schema"},
+
+        "gatewayMAC": {
+            "type": "string",
+            "pattern": "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"
+        }
+    },
+    
+    "additionalProperties": false
+}

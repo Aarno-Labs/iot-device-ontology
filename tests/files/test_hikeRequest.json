@@ -1,0 +1,51 @@
+{
+    "hikeMessageUUID": "90704491-690a-405a-b938-69bc60f705e2",
+
+    "fingerprintRequest": {
+        "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
+        "agentUUID": "00000000-0000-0000-0000-0000000000A0",
+        "fingerprintMethods": ["ACTIVE", "PASSIVE"],
+        "targetIP": {
+            "value": "128.6.21.6",
+            "version": 4
+        },
+        "targetMAC": "0c:c4:7a:91:9a:37",
+        "gatewayIP": {
+            "value": "128.6.21.7",
+            "version": 4
+        },
+        "gatewayMAC": "0c:c4:7a:91:9a:38"
+    },
+
+    "type": "REQUEST_ACTIONS",
+
+    "priorActionRequests": [
+        {
+            "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
+            "actionID": 1,
+            "action": "ACTIVE",
+            "protocol": "UPNP",
+            "dstIP": {
+                "value": "128.6.21.6",
+                "version": 4
+            },
+            "port": 1900,
+            "timeoutMillisecs": 5000,
+            "base64Request": "TS1TRUFSQ0ggKiBIVFRQLzEuMQ0KSE9TVDogMjM5LjI1NS4yNTUuMjUwOjE5MDANCk1BTjogInNzZHA6ZGlzY292ZXIiDQpTVDogc3NkcDphbGwNCk1YOiA1DQoNCg=="
+        }
+    ],
+
+    "priorActionResponses": [
+        {
+            "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
+            "actionID": 1,
+            "protocol": "TCP",
+            "base64Response": "askljfdl;kajsdf",
+            "ip": {
+                "value": "128.6.21.6",
+                "version": 4
+            },
+            "port": 23
+        }
+    ]
+}

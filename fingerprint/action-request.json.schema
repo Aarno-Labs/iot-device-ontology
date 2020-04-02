@@ -1,0 +1,126 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "action-request.json.schema",
+    "title": "HACCS Fingerprint Action Request",
+    "description": "RFC Request for network action to Agent",
+    "type": "object",
+
+    "required": ["action"],
+    
+    "properties": {
+        "action": {
+            "type": "string",
+            "enum": ["PASSIVE", "ACTIVE"]
+        }
+    },
+
+    "allOf": [
+        {
+            "if": {
+                "properties": { "action": { "const": "PASSIVE" } }
+            },
+            "then": {
+                "additionalProperties": false,
+
+                "required": ["fingerprintUUID", "actionID", "action"],
+
+                "properties" : {
+                    "action": {
+                        "type": "string",
+                        "enum": ["PASSIVE"]
+                    },
+
+                    "actionID": {
+                        "type": "integer"
+                    },
+
+                    "fingerprintUUID": {
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                    },
+
+                    "millisecondsToSample" : {
+                        "type": "integer",
+                        "exclusiveMinimum": 0
+                    },
+                    
+                    "interfaceName" : {
+                        "type": "string",
+                        "description": "How will the RFC know the interface name?  Might want to delete this, should be up to agent."
+                    },
+
+                    "srcPort" : {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 65535
+                    },
+                    
+                    "dstPort" : {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 65535
+                    },
+                    
+                    "maxSampleSizeKB" : {
+                        "type": "integer",
+                        "exclusiveMinimum": 0
+                    }
+                }
+            }
+        },
+
+        {
+            "if": {
+                "properties": { "action": { "const": "ACTIVE" } }
+            },
+            "then": {
+                "additionalProperties": false,
+
+                "required": ["fingerprintUUID", "actionID", "action",  "protocol", "port", "timeoutMillisecs"],
+                
+                "properties" : {
+                    "action": {
+                        "type": "string",
+                        "enum": ["ACTIVE"]
+                    },
+
+                    "actionID": {
+                        "type": "integer"
+                    },
+
+                    "fingerprintUUID": {
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                    },
+                    
+                    "protocol": {
+                        "type": "string",
+                        "enum": ["MDNS", "UPNP", "TCP", "UDP"]
+                    },
+
+                    "dstIP":  {"$ref": "../worldmodel/ipAddress.json.schema"},
+                    
+                    "port": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 65535
+                    },
+
+                    "timeoutMillisecs": {
+                        "type": "integer",
+                        "exclusiveMinimum": 0
+                    },
+
+                    "base64Request": {
+                        "type": "string",
+                        "minLength": 1
+                    }
+                }
+            }
+        }
+    ]
+}
+
+

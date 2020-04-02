@@ -1,0 +1,15 @@
+{
+    "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
+    "agentUUID": "00000000-0000-0000-0000-0000000000A0",
+    "fingerprintMethods": ["ACTIVE", "PASSIVE"],
+    "targetIP": {
+        "value": "128.6.21.6",
+        "version": 4
+    },
+    "targetMAC": "0c:c4:7a:91:9a:37",
+    "gatewayIP": {
+        "value": "128.6.21.7",
+        "version": 4
+    },
+    "gatewayMAC": "0c:c4:7a:91:9a:38"
+}
