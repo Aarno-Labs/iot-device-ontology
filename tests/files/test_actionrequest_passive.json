@@ -2,13 +2,9 @@
     "messageType": "ACTION_REQUEST",
     "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
     "actionID": 1,
-    "action": "ACTIVE",
-    "protocol": "UPNP",
-    "dstIP": {
-        "value": "128.6.21.6",
-        "version": 4
-    },
-    "port": 1900,
-    "timeoutMillisecs": 5000,
-    "base64Request": "TS1TRUFSQ0ggKiBIVFRQLzEuMQ0KSE9TVDogMjM5LjI1NS4yNTUuMjUwOjE5MDANCk1BTjogInNzZHA6ZGlzY292ZXIiDQpTVDogc3NkcDphbGwNCk1YOiA1DQoNCg=="
+    "action": "PASSIVE",
+    "srcPort": 1900,
+    "dstPort": 19010,
+    "millisecondsToSample": 5000,
+    "maxSampleSizeKB": 10000
 }
