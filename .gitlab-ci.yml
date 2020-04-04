@@ -4,4 +4,4 @@ stages:
 test:
   stage: test
   script:
-  - pytest tests/*.py
+  - sudo pytest tests/*.py
