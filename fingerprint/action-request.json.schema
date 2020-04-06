@@ -54,16 +54,43 @@
                         "description": "How will the RFC know the interface name?  Might want to delete this, should be up to agent."
                     },
 
-                    "srcPort" : {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 65535
+                    "protocols": {
+                        "description": "Constrain passive capture to only these protocols",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": ["MDNS", "UPNP", "TCP", "UDP", "ICMP"]
+                        }
+                    },
+
+                    "srcIPs" : {
+                        "description": "Constrain passive capture to only these source IPs",
+                        "type": "array",
+                        "items": {"$ref": "../worldmodel/ipAddress.json.schema"}
+                    },
+
+                    "dstIPs" : {
+                        "description": "Constrain passive capture to only these dest IPs",
+                        "type": "array",
+                        "items": {"$ref": "../worldmodel/ipAddress.json.schema"}
                     },
                     
-                    "dstPort" : {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 65535
+                    "srcPorts" : {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 65535
+                        }
+                    },
+                    
+                    "dstPorts" : {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 65535
+                        }
                     },
                     
                     "maxSampleSizeKB" : {

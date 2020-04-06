@@ -3,8 +3,15 @@
     "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
     "actionID": 1,
     "action": "PASSIVE",
-    "srcPort": 1900,
-    "dstPort": 19010,
+    "protocols": ["TCP", "UDP"],
+    "srcIPs": [
+        {
+        "value": "128.6.21.6",
+        "version": 4
+        }
+    ],
+    "srcPorts": [1900],
+    "dstPorts": [19010],
     "millisecondsToSample": 5000,
     "maxSampleSizeKB": 10000
 }

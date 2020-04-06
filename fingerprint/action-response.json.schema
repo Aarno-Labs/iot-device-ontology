@@ -28,7 +28,10 @@
         },
 
         "base64Response": {
-            "type": "string"
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         },
 
         "ip":  {"$ref": "../worldmodel/ipAddress.json.schema"},
