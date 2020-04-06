@@ -10,3 +10,10 @@ def test_get_agentSpawnEvent():
 
         assert_valid_schema(json_data,
                             'hike-mgt-api/agentSpawnEvent.json.schema')
+
+def test_get_agentSpawnEvent_noTimestamp():
+    with open('tests/files/test-agentSpawnEvent-noTimestamp.json') as json_file:
+        json_data = json.load(json_file)
+
+        assert_valid_schema(json_data,
+                            'hike-mgt-api/agentSpawnEvent.json.schema')

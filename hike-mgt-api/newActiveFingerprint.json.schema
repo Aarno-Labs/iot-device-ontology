@@ -1,15 +1,16 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "agent-removal-event.schema.json",
-    "title": "Agent Removal Event",
-    "description": "Agent Removal Event in HIKE Management API",
+    "$id": "new-active-fingerprint.schema.json",
+    "title": "New Active Fingerprint Event",
+    "description": "New Active Fingerprint event in HIKE Management API",
     "type": "object",
 
-    "required": ["host", "agent", "reason"],
+    "required": ["target", "agent", "transaction_id"],
 
     "properties": {
-        "host": {
+        "target": {
             "type": "string",
+            "description": "The device that is being fingerprinted is known as the target",
             "format": "uuid",
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
@@ -18,11 +19,11 @@
             "format": "uuid",
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
-        "reason": {
+        "transaction_id": {
             "type": "string"
         },
         "timestamp": {
-            "description": "Time of agent removal from host device's clock (NOTE: optional)"
+            "description": "Time of new active fingerprint from target device's clock (NOTE: optional)"
         }
     },
 

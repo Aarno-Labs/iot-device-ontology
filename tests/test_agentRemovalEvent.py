@@ -9,3 +9,9 @@ def test_get_agentRemovalEvent():
         json_data = json.load(json_file)
 
         assert_valid_schema(json_data, 'hike-mgt-api/agentRemovalEvent.json.schema')
+
+def test_get_agentRemovalEvent_noTimestamp():
+    with open('tests/files/test-agentRemovalEvent-noTimestamp.json') as json_file:
+        json_data = json.load(json_file)
+
+        assert_valid_schema(json_data, 'hike-mgt-api/agentRemovalEvent.json.schema')

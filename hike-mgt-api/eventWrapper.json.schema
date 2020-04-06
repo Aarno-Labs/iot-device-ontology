@@ -5,7 +5,7 @@
     "description": "Event in HIKE Management API",
     "type": "object",
 
-    "required": ["op_id", "event_type", "event_data"],
+    "required": ["op_id", "event_type", "event_data", "timestamp"],
 
     "properties": {
         "op_id": {
@@ -14,6 +14,11 @@
         "event_type": {
             "type": "string",
             "pattern": "^0x[a-fA-F0-9]$"
+        },
+        "timestamp": {
+            "type": "integer",
+            "description": "UNIX Epoch Time"
+        
         },
         "event_data": {
             "type": "string"

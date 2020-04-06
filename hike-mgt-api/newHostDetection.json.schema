@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "new-host-detection-event.schema.json",
+    "title": "New Host Detection Event",
+    "description": "New Host Detection Event in HIKE Management API",
+    "type": "object",
+
+    "required": ["host"],
+
+    "properties": {
+        "host": {
+            "description": "best effort to fill in as many fields as possible from json host schema"
+        }
+    },
+
+    "additionalProperties": false
+}

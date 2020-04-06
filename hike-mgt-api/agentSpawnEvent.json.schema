@@ -5,7 +5,7 @@
     "description": "Agent Spawn Event in HIKE Management API",
     "type": "object",
 
-    "required": ["parent", "host", "timeOfSpawn"],
+    "required": ["parent", "host"],
 
     "properties": {
         "parent": {
@@ -18,9 +18,8 @@
             "format": "uuid",
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
-        "timeOfSpawn": {
-            "type": "integer",
-            "minimum": 0
+        "timestamp": {
+            "description": "Agent spawn time from host device's clock (NOTE: optional)"
         }
     },
 
