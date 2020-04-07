@@ -1,15 +1,36 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "new-host-detection-event.schema.json",
+    "$id": "newHostDetectionEvent.schema.json",
     "title": "New Host Detection Event",
     "description": "New Host Detection Event in HIKE Management API",
     "type": "object",
 
-    "required": ["host"],
+    "required": ["opID", "eventType", "timestamp", "eventData"],
 
     "properties": {
-        "host": {
-            "description": "best effort to fill in as many fields as possible from json host schema"
+        "opID": {
+            "type": "string"
+        },
+        
+        "eventType": {
+            "type": "string",
+            "enum": ["NEW_HOST_DETECTION"]
+        },
+
+        "timestamp": {
+            "type": "integer",
+            "description": "UNIX Epoch Time"
+        },
+        
+        "eventData": {
+            "type": "object",
+            "additionalProperties": false,
+
+            "required": ["host"],
+            
+            "properties": {
+                "host": {"$ref": "../operations/host.json.schema"}
+            }
         }
     },
 

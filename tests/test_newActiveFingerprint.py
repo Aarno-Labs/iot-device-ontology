@@ -9,4 +9,4 @@ def test_get_newActiveFingerprint():
         json_data = json.load(json_file)
 
         assert_valid_schema(json_data,
-                            'hike-mgt-api/newActiveFingerprint.json.schema')
+                            'hike-mgt-api/newActiveFingerprintEvent.json.schema')

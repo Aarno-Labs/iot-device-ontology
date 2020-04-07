@@ -1,5 +1,10 @@
 {
-    "agent": "04327420-0000-0000-0000-000000000009",
-    "phase_id": "asdf123",
-    "timestamp": 1234567
+    "opID": "A",
+    "eventType": "OPERATION_PHASE_UPDATE",
+    "timestamp": 1,
+    "eventData": {
+        "agent": "04327420-0000-0000-0000-000000000009",
+        "newPhase": "CLEANUP",
+        "timestamp": 1234567
+    }
 }

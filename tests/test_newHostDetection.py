@@ -9,4 +9,4 @@ def test_get_newHostDetection():
         json_data = json.load(json_file)
 
         assert_valid_schema(json_data,
-                            'hike-mgt-api/newHostDetection.json.schema')
+                            'hike-mgt-api/newHostDetectionEvent.json.schema')

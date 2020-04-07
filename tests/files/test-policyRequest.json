@@ -1,5 +1,11 @@
 {
-    "agent": "04327420-0000-0000-0000-000000000009",
-    "severity": "Medium",
-    "reason": "we really need it"
+    "opID": "A",
+    "eventType": "POLICY_REQUEST",
+    "timestamp": 1,
+    "eventData": {
+        "agent": "04327420-0000-0000-0000-000000000009",
+        "severity": "MEDIUM",
+        "reason": "we really need it"
+    }
 }
+

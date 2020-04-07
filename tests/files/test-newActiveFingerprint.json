@@ -1,6 +1,11 @@
 {
-    "target": "04327420-0000-0000-0000-000000000019",
-    "agent": "04327420-0000-0000-0000-000000000009",
-    "transaction_id": "abc2134",
-    "timestamp": 1234567
+    "opID": "A",
+    "eventType": "NEW_ACTIVE_FINGERPRINT",
+    "timestamp": 1,
+    "eventData": {
+        "target": "04327420-0000-0000-0000-000000000019",
+        "agent": "04327420-0000-0000-0000-000000000009",
+        "transactionID": "abc2134",
+        "timestamp": 1234567
+    }
 }

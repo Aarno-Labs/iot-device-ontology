@@ -9,4 +9,4 @@ def test_get_transactionResponse():
         json_data = json.load(json_file)
 
         assert_valid_schema(json_data,
-                            'hike-mgt-api/transactionResponse.json.schema')
+                            'hike-mgt-api/transactionResponseEvent.json.schema')

@@ -1,28 +1,54 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "agent-removal-event.schema.json",
+    "$id": "agentRemoveEvent.schema.json",
     "title": "Agent Removal Event",
     "description": "Agent Removal Event in HIKE Management API",
     "type": "object",
 
-    "required": ["host", "agent", "reason"],
+    "required": ["opID", "eventType", "timestamp", "eventData"],
 
     "properties": {
-        "host": {
-            "type": "string",
-            "format": "uuid",
-            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
-        },
-        "agent": {
-            "type": "string",
-            "format": "uuid",
-            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
-        },
-        "reason": {
+        "opID": {
             "type": "string"
         },
+        
+        "eventType": {
+            "type": "string",
+            "enum": ["AGENT_REMOVAL"]
+        },
+
         "timestamp": {
-            "description": "Time of agent removal from host device's clock (NOTE: optional)"
+            "type": "integer",
+            "description": "UNIX Epoch Time"
+        },
+        
+        "eventData": {
+            "type": "object",
+            "additionalProperties": false,
+
+            "required": ["host", "agent", "reason"],
+
+            "properties": {
+                "host": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                },
+
+                "agent": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                },
+
+                "reason": {
+                    "type": "string"
+                },
+
+                "timestamp": {
+                    "description": "Time of agent removal from host device's clock (NOTE: optional)"
+                }
+            }
         }
     },
 

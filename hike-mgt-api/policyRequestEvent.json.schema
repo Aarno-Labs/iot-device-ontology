@@ -1,24 +1,49 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "policy-request-event.schema.json",
+    "$id": "policyRequestEvent.schema.json",
     "title": "Policy Request Event",
     "description": "Policy Request Event to HIKE Management API",
     "type": "object",
-
-    "required": ["severity", "agent", "reason"],
-
+    
+    "required": ["opID", "eventType", "timestamp", "eventData"],
+    
     "properties": {
-        "severity": {
-            "type": "string",
-            "enum": ["Critical", "High", "Medium", "Low"]
-        },
-        "agent": {
-            "type": "string",
-            "format": "uuid",
-            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
-        },
-        "reason": {
+        "opID": {
             "type": "string"
+        },
+        
+        "eventType": {
+            "type": "string",
+            "enum": ["POLICY_REQUEST"]
+        },
+
+        "timestamp": {
+            "type": "integer",
+            "description": "UNIX Epoch Time"
+        },
+        
+        "eventData": {
+            "type": "object",
+            "additionalProperties": false,
+
+            "required": ["severity", "agent", "reason"],
+
+            "properties": {
+                "severity": {
+                    "type": "string",
+                    "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
+                },
+                
+                "agent": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                },
+                
+                "reason": {
+                    "type": "string"
+                }
+            }
         }
     },
 

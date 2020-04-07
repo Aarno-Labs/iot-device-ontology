@@ -9,4 +9,4 @@ def test_get_operationPhaseUpdate():
         json_data = json.load(json_file)
 
         assert_valid_schema(json_data,
-                            'hike-mgt-api/operationPhaseUpdate.json.schema')
+                            'hike-mgt-api/operationPhaseUpdateEvent.json.schema')

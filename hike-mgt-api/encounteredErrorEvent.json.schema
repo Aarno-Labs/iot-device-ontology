@@ -1,35 +1,63 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "encountered-error-event.schema.json",
+    "$id": "encounteredErrorEvent.schema.json",
     "title": "Encountered Error Event",
     "description": "Encountered Error Event to HIKE Management API",
     "type": "object",
 
-    "required": ["host", "agent", "severity", "result", "debug"],
+    "required": ["opID", "eventType", "timestamp", "eventData"],
 
     "properties": {
-        "agent": {
-            "type": "string",
-            "format": "uuid",
-            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
-        },
-        "host": {
-            "type": "string",
-            "format": "uuid",
-            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
-        },
-        "severity": {
-            "type": "string",
-            "enum": ["Critical", "High", "Medium", "Low"]
-        },
-        "result": {
+        "opID": {
             "type": "string"
         },
-        "debug": {
-            "description": "Any helpful debugging informaton"
+        
+        "eventType": {
+            "type": "string",
+            "enum": ["ENCOUNTERED_ERROR"]
         },
+
         "timestamp": {
-            "description": "Time of error from host device's clock (NOTE: optional)"
+            "type": "integer",
+            "description": "UNIX Epoch Time"
+        },
+        
+        "eventData": {
+            "type": "object",
+            "additionalProperties": false,
+
+            "required": ["host", "agent", "severity", "result", "debug"],
+
+            "properties": {
+                "agent": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                },
+                
+                "host": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                },
+                
+                "severity": {
+                    "type": "string",
+                    "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
+                },
+                
+                "result": {
+                    "type": "string"
+                },
+                
+                "debug": {
+                    "description": "Any helpful debugging informaton"
+                },
+                
+                "timestamp": {
+                    "description": "Time of error from host device's clock (NOTE: optional)"
+                }
+            }
         }
     },
 

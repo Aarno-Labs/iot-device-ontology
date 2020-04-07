@@ -1,25 +1,48 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "agent-spawn.schema.json",
+    "$id": "agentSpawnEvent.schema.json",
     "title": "Agent Spawn Event",
     "description": "Agent Spawn Event in HIKE Management API",
     "type": "object",
 
-    "required": ["parent", "host"],
+    "required": ["opID", "eventType", "timestamp", "eventData"],
 
     "properties": {
-        "parent": {
-            "type": "string",
-            "format": "uuid",
-            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        "opID": {
+            "type": "string"
         },
-        "host": {
+        
+        "eventType": {
             "type": "string",
-            "format": "uuid",
-            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+            "enum": ["AGENT_SPAWN"]
         },
+
         "timestamp": {
-            "description": "Agent spawn time from host device's clock (NOTE: optional)"
+            "type": "integer",
+            "description": "UNIX Epoch Time"
+        },
+        
+        "eventData": {
+            "type": "object",
+            "additionalProperties": false,
+
+            "required": ["parent", "host"],
+
+            "properties": {
+                "parent": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                },
+                "host": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                },
+                "timestamp": {
+                    "description": "Agent spawn time from host device's clock (NOTE: optional)"
+                }
+            }
         }
     },
 

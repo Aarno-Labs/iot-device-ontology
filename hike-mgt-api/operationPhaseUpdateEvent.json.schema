@@ -1,23 +1,50 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "operation-phase-update.schema.json",
+    "$id": "operationPhaseUpdateEvent.schema.json",
     "title": "Operation Phase Update",
     "description": "Operation Phase Update event in HIKE Management API",
     "type": "object",
 
-    "required": ["agent", "phase_id"],
-
+    "required": ["opID", "eventType", "timestamp", "eventData"],
+    
     "properties": {
-        "agent": {
-            "type": "string",
-            "format": "uuid",
-            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
-        },
-        "phase_id": {
+        "opID": {
             "type": "string"
         },
+        
+        "eventType": {
+            "type": "string",
+            "enum": ["OPERATION_PHASE_UPDATE"]
+        },
+
         "timestamp": {
-            "description": "Time of phase change from host device's clock (NOTE: optional)"
+            "type": "integer",
+            "description": "UNIX Epoch Time"
+        },
+        
+        "eventData": {
+            "type": "object",
+            "additionalProperties": false,
+
+            "required": ["agent", "newPhase"],
+
+            "properties": {
+                "agent": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                },
+                
+                "newPhase": {
+                    "type": "string",
+                    "enum": ["INITIALIZATION", "NETWORK_PENETRATION", "NETWORK_TRAVERSAL" ,
+                             "NEUTRALIZATION_ACTIONS", "REMEDIATION_ACTIONS", "CLEANUP"]
+                },
+                
+                "timestamp": {
+                    "description": "Time of phase change from host device's clock (NOTE: optional)"
+                }
+            }
         }
     },
 

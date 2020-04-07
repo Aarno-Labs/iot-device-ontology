@@ -1,5 +1,10 @@
 {
-    "host": "04327420-0000-0000-0000-000000000009",
-    "action": "kill -9 bot.exe",
-    "returnCode": 0
+    "opID": "A",
+    "eventType": "APPLIED_ON_HOST_ACTION",
+    "timestamp": 1,
+    "eventData": {
+        "host": "04327420-0000-0000-0000-000000000009",
+        "action": "kill -9 bot.exe",
+        "result": "SUCCESS"
+    }
 }

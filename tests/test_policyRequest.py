@@ -9,4 +9,4 @@ def test_get_policyRequest():
         json_data = json.load(json_file)
 
         assert_valid_schema(json_data,
-                            'hike-mgt-api/policyRequest.json.schema')
+                            'hike-mgt-api/policyRequestEvent.json.schema')
