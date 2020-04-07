@@ -5,18 +5,11 @@
     "description": "HIKE request from RFC to agent for instructions or analysis",
     "type": "object",
 
-    "required": ["messageType", "hikeMessageUUID", "fingerprintRequest", "type"],
+    "required": ["messageType", "fingerprintRequest", "type"],
 
     "properties": {
         "messageType": {
             "enum": ["HIKE_REQUEST"]
-        },
-        
-        "hikeMessageUUID": {
-            "description": "UUID of this message, assigned by RFC.  This UUID will appear in message response from HIKE.", 
-            "type": "string",
-            "format": "uuid",
-            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
         
         "fingerprintRequest":  {"$ref": "fingerprint-request.json.schema"},
@@ -24,7 +17,7 @@
         "type": {
             "description": "Type of request. Only one type for now.",
             "type": "string",
-            "enum": ["REQUEST_ACTIONS"]
+            "enum": ["ACTIONS_REQUEST"]
         },
 
         "priorActionRequests": {

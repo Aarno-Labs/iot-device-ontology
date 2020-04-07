@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fingerprintData.schema.json",
+    "title": "TA1 Fingerprint Data from HIKE",
+    "description": "Fingerprint data responses from HIKE to Agent C2",
+    "type": "object",
+
+
+    "properties": {
+        "messageType": {
+            "type": "string",
+            "enum": ["ACTIONS_RESPONSE", "FINGERPRINT"]
+        }
+    },
+
+    "allOf": [
+        {
+            "if": {
+                "properties": { "messageType": { "const": "ACTIONS_RESPONSE" } }
+            },
+            "then": {
+                "additionalProperties": false,
+                "required": ["messageType", "responseData"],
+                
+                "properties" : {
+                    "messageType": {
+                        "type": "string",
+                        "enum": ["ACTIONS_RESPONSE"]
+                    },
+                    
+                    "hikeMessageUUID": {
+                        "description": "UUID of message to HIKE that caused this response.", 
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                    },
+
+                    "responseData": {"$ref": "../fingerprint/hike-response.json.schema"}
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": { "messageType": { "const": "FINGERPRINT" } }
+            },
+            "then": {
+                "additionalProperties": false,
+                "required": ["messageType", "fingerprintData"],
+                
+                "properties" : {
+                    "messageType": {
+                        "type": "string",
+                        "enum": ["FINGERPRINT"]
+                    },
+                    
+                    "fingerprintData": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": ["fingerprintUUID", "host"],
+                        
+                        "properties": {
+                            "fingerprintUUID": {
+                                "type": "string",
+                                "format": "uuid",
+                                "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                            },
+                            
+                            "host": {"$ref": "../operations/host.json.schema"}
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

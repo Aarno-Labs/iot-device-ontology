@@ -1,11 +1,13 @@
 {
     "opID": "A",
-    "eventType": "AGENT_REMOVAL",
+    "eventType": "ENCOUNTERED_ERROR",
     "timestamp": 1,
     "eventData": {
         "agent": "04327420-0000-0000-0000-000000000009",
         "host": "00000000-0000-0000-0000-000000000009",
-        "reason": "END OF CAMPAIGN",
-        "timestamp": 1583862767
+        "severity": "CRITICAL",
+        "result": "Unsuccessful",
+        "debug": "line 500  - abc.py",
+        "timestamp": 12348950
     }
 }

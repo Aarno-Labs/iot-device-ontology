@@ -1,65 +1,64 @@
 {
     "name": "Test",
+
     "organization": "Darpa",
-    
-    "metadata": {
-        "This":"Can be anything"
-    },
-    
-    "whitelist":{
-        "networks": [
-            "e4bf6036-c0b2-43c8-b165-43eac7c7fd75",
-            "fe50170c-5dc4-4af0-8066-3ee72273784e"
-        ],
-        "devices":[
-            "2e9c74d6-4f61-4fbb-80ad-6d992ff0bde4"
-        ],
-        "ports": [80, 443]
-    },
-    
-    "blacklist": {
-        "hosts": [
-            "e4bf6036-c0b2-43c8-b165-43eac7c7fd75"
-        ],
-        "architectures": [
-            "00000000-0000-0000-0000-000000000004"
-        ],
-        "ips": {
-            "ipv4": [
-                "128.6.21.6",
-                "192.154.123.122/16"
-            ]
-        }
-    },
-    
-    "policy": [
-        "DENY ALL ALWAYS",
-        "ALLOW ALL IF DEVICE IN WHITELIST",
-        "ALLOW ALL IF IP IN WHITELIST",
-        "ALLOW ALL IF HOST IN WHITELIST"
-    ],
-    
+
     "neutralizations": {
         "on_infected":[
             {
                 "action": "KILL",
-                "name": "DGA.PY"
-            },
-            {
-                "action": "REBOOT",
-                "time_sec": 1
+                "name": "^sleep 1000[0-9].*$"
             }
         ],
-        "on_gateway":[
-            {
-                "action": "NETWORK",
-                "type": "TRAFFIC_REDIRECT",
-                "source": ["10.0.1.23/32"],
-                "dest": ["e4bf6036-c0b2-43c8-b165-43eac7c7fd75"],
-                "redirection_target": "8.8.8.8",
-                "protocol": "UDP",
-                "dport": 53
-            }
-        ]
-    }
+        "on_gateway":[]
+    },
+
+    
+    "networks": [
+        {
+            "uuid": "00000000-0000-0000-0000-000000000009",
+            "hosts": [
+                {
+                    "uuid": "00000000-0000-0000-0000-000000000007",
+                    "hostnames": ["haccs-desktop"],
+                    "possibleDevices": [
+                        {
+                            "device": "10522b58-7afa-4984-852a-b0907c29ec3c",
+                            "confidence": 8
+                        }
+                    ],
+                    "interfaces": [
+                        {
+                            "ipAddresses": [
+                                {
+                                    "value": "159.89.90.2",
+                                    "version": 4
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uuid": "00000000-0000-0000-0000-000000000022",
+                    "hostnames": ["haccs-desktop2"],
+                    "possibleDevices": [
+                        {
+                            "device": "10522b58-7afa-4984-852a-b0907c29ec3c",
+                            "confidence": 8
+                        }
+                    ],
+                    "interfaces": [
+                        {
+                            "ipAddresses": [
+                                {
+                                    "value": "192.168.0.3",
+                                    "version": 4
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

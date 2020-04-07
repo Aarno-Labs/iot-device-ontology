@@ -1,0 +1,11 @@
+{
+    "opID": "A",
+    "eventType": "TRANSACTION_RESPONSE",
+    "timestamp": 1,
+    "eventData": {
+        "transactionalID": "04327420-0000-0000-0000-000000000019",
+        "transactionData": {
+            "result": "we did it"
+        }
+    }
+}

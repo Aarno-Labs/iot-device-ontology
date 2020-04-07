@@ -1,0 +1,28 @@
+{
+    "messageType": "ACTIONS_RESPONSE",
+    "hikeMessageUUID": "00000000-0000-0000-0000-000000000001",
+    "responseData": {
+        "messageType": "HIKE_RESPONSE",
+        "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
+        "agentUUID": "00000000-0000-0000-0000-0000000000A0",
+        
+        "responseType": "ACTIONS_RESPONSE",
+
+        "actionsToPerform": [
+            {
+                "messageType": "ACTION_REQUEST",
+                "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
+                "actionID": 1,
+                "action": "ACTIVE",
+                "protocol": "UPNP",
+                "dstIP": {
+                    "value": "128.6.21.6",
+                    "version": 4
+                },
+                "port": 1900,
+                "timeoutMillisecs": 5000,
+                "base64Request": "TS1TRUFSQ0ggKiBIVFRQLzEuMQ0KSE9TVDogMjM5LjI1NS4yNTUuMjUwOjE5MDANCk1BTjogInNzZHA6ZGlzY292ZXIiDQpTVDogc3NkcDphbGwNCk1YOiA1DQoNCg=="
+            }
+        ]
+    }
+}

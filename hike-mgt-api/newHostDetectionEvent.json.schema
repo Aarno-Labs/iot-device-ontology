@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "newHostDetectionEvent.schema.json",
+    "title": "New Host Detection Event",
+    "description": "New Host Detection Event in HIKE Management API",
+    "type": "object",
+
+    "required": ["opID", "eventType", "timestamp", "eventData"],
+
+    "properties": {
+        "opID": {
+            "type": "string"
+        },
+        
+        "eventType": {
+            "type": "string",
+            "enum": ["NEW_HOST_DETECTION"]
+        },
+
+        "timestamp": {
+            "type": "integer",
+            "description": "UNIX Epoch Time"
+        },
+        
+        "eventData": {
+            "type": "object",
+            "additionalProperties": false,
+
+            "required": ["host"],
+
+            "fingerprintUUID": {
+                "description": "UUID of the fingerprint request that corresponds with this host",
+                "type": "string",
+                "format": "uuid",
+                "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+            },
+            
+            "properties": {
+                "host": {"$ref": "../operations/host.json.schema"}
+            }
+        }
+    },
+
+    "additionalProperties": false
+}

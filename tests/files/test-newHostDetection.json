@@ -1,0 +1,51 @@
+{
+    "opID": "A",
+    "eventType": "NEW_HOST_DETECTION",
+    "timestamp": 1,
+    "eventData": {
+        "host": {
+            "hostnames": ["haccs-desktop"],
+            "possibleDevices": [
+                {
+                    "device": "00000000-0000-0000-0000-000000000001",
+                    "confidence": 8
+                },
+                {
+                    "device": "00000000-0000-0000-0000-000000000002",
+                    "confidence": 3
+                }
+            ],
+            "interfaces": [
+                {
+                    "ipAddresses": [
+                        {
+                            "value": "128.6.21.6",
+                            "version": 4
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "num": 23,
+                            "confidence": 10,
+                            "serviceVersions": {
+                                "service": "00000000-0000-0000-0000-000000000003",
+                                "versionBegin": "1.0",
+                                "versionEnd": "2.0"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "botnets": [
+                {
+                    "confidence": 8,
+                    "softwareVersions": {
+                        "software": "00000000-0000-0000-0000-000000000004",
+                        "versionBegin": "1.0",
+                        "versionEnd": "1.0"
+                    }
+                }
+            ]
+        }
+    }
+}
