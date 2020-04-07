@@ -27,6 +27,13 @@
             "additionalProperties": false,
 
             "required": ["host"],
+
+            "fingerprintUUID": {
+                "description": "UUID of the fingerprint request that corresponds with this host",
+                "type": "string",
+                "format": "uuid",
+                "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+            },
             
             "properties": {
                 "host": {"$ref": "../operations/host.json.schema"}

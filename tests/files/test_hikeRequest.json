@@ -1,6 +1,5 @@
 {
     "messageType": "HIKE_REQUEST",
-    "hikeMessageUUID": "90704491-690a-405a-b938-69bc60f705e2",
     "fingerprintRequest": {
         "messageType": "FINGERPRINT_REQUEST",
         "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
@@ -18,7 +17,7 @@
         "gatewayMAC": "0c:c4:7a:91:9a:38"
     },
 
-    "type": "REQUEST_ACTIONS",
+    "type": "ACTIONS_REQUEST",
 
     "priorActionRequests": [
         {
