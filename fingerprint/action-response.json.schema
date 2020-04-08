@@ -45,7 +45,8 @@
         "errorCode": {
             "type": "string",
             "enum": ["TIMEOUT", "CONN_REFUSED", "NET_UNREACHABLE", "HOST_UNREACHABLE",
-                     "NOT_SUPPORTED", "NO_PERM", "PORT_UNREACHABLE", "TRY_AGAIN", "UNKNOWN"],
+                     "NOT_SUPPORTED", "NO_PERM", "PORT_UNREACHABLE", "TRY_AGAIN",
+                     "POLICY_VIOLATION", "UNKNOWN"],
             "description": "Absence of errorCode field means success"
         },
 

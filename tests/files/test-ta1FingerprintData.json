@@ -47,7 +47,7 @@
                 "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
                 "actionID": 1,
                 "protocol": "TCP",
-                "base64Response": "askljfdl;kajsdf",
+                "base64Response": ["askljfdl;kajsdf"],
                 "ip": {
                     "value": "128.6.21.6",
                     "version": 4
