@@ -36,7 +36,7 @@
 
                     "TA": {
                         "type": "string",
-                        "enum": ["KEYW", "GTRI"]
+                        "enum": ["KEYW", "GATECH"]
                     },
 
                     "actionID": {
@@ -123,7 +123,7 @@
 
                     "TA": {
                         "type": "string",
-                        "enum": ["KEYW", "GTRI"]
+                        "enum": ["KEYW", "GATECH"]
                     },
 
                     "actionID": {
