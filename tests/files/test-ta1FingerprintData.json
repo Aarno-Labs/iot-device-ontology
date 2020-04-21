@@ -31,7 +31,7 @@
                 "actionID": 1,
                 "action": "ACTIVE",
                 "protocol": "UPNP",
-                "TA": "GTRI",
+                "TA": "GATECH",
                 "dstIP": {
                     "value": "128.6.21.6",
                     "version": 4
