@@ -59,7 +59,7 @@
                         "type": "array",
                         "items": {
                             "type": "string",
-                            "enum": ["MDNS", "UPNP", "TCP", "UDP", "ICMP"]
+                            "enum": ["TCP", "UDP", "ICMP"]
                         }
                     },
 
