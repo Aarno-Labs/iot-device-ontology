@@ -36,7 +36,7 @@
 
                     "TA": {
                         "type": "string",
-                        "enum": ["KEYW", "GTRI"]
+                        "enum": ["KEYW", "GATECH"]
                     },
 
                     "actionID": {
@@ -54,17 +54,12 @@
                         "exclusiveMinimum": 0
                     },
                     
-                    "interfaceName" : {
-                        "type": "string",
-                        "description": "How will the RFC know the interface name?  Might want to delete this, should be up to agent."
-                    },
-
                     "protocols": {
                         "description": "Constrain passive capture to only these protocols",
                         "type": "array",
                         "items": {
                             "type": "string",
-                            "enum": ["MDNS", "UPNP", "TCP", "UDP", "ICMP"]
+                            "enum": ["TCP", "UDP", "ICMP"]
                         }
                     },
 
@@ -128,7 +123,7 @@
 
                     "TA": {
                         "type": "string",
-                        "enum": ["KEYW", "GTRI"]
+                        "enum": ["KEYW", "GATECH"]
                     },
 
                     "actionID": {

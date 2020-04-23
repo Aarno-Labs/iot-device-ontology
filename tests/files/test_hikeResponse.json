@@ -11,7 +11,7 @@
             "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
             "actionID": 1,
             "action": "ACTIVE",
-            "TA": "GTRI",
+            "TA": "GATECH",
             "protocol": "UPNP",
             "dstIP": {
                 "value": "128.6.21.6",
