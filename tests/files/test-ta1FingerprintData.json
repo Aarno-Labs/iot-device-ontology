@@ -1,6 +1,6 @@
 {
-    "opID": "A",
-    "eventType": "TA1_FINGERPRINT_DATA",
+    "opID": "04327420-0000-0000-0000-000000000020",
+    "eventType": 11,
     "timestamp": 1,
     "hikeMessageUUID": "00000000-0000-0000-0000-000000000AAA",
     "eventData": {

@@ -1,6 +1,6 @@
 {
-    "opID": "A",
-    "eventType": "AGENT_SPAWN",
+    "opID": "04327420-0000-0000-0000-000000000020",
+    "eventType": 1,
     "timestamp": 1,
     "eventData": {
         "parent": "04327420-0000-0000-0000-000000000009",

@@ -1,6 +1,6 @@
 {
-    "opID": "A",
-    "eventType": "NEW_HOST_DETECTION",
+    "opID": "04327420-0000-0000-0000-000000000020",
+    "eventType": 4,
     "timestamp": 1,
     "eventData": {
         "host": {

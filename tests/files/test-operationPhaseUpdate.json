@@ -1,6 +1,6 @@
 {
-    "opID": "A",
-    "eventType": "OPERATION_PHASE_UPDATE",
+    "opID": "04327420-0000-0000-0000-000000000020",
+    "eventType": 6,
     "timestamp": 1,
     "eventData": {
         "agent": "04327420-0000-0000-0000-000000000009",

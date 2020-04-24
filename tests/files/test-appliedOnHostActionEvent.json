@@ -1,6 +1,6 @@
 {
-    "opID": "A",
-    "eventType": "APPLIED_ON_HOST_ACTION",
+    "opID": "04327420-0000-0000-0000-000000000020",
+    "eventType": 3,
     "timestamp": 1,
     "eventData": {
         "host": "04327420-0000-0000-0000-000000000009",
