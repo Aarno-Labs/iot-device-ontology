@@ -4,6 +4,8 @@
     "title": "HACCS Operation Plan",
     "description": "",
     "type": "object",
+
+    "required": ["opID"],
     
     "properties": {
         "name": {
