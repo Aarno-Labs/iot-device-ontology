@@ -1,1 +1,16 @@
-{"eventData":{"host":{"interfaces":[{"ipAddresses":[{"value":"127.0.0.1","version":4}]}]},"agentID":"19f4a61e-5e7e-e756-72f6-9a21b1d8e154"},"eventType":12,"timestamp":1588000232}
+{
+    "eventData":{
+        "host":{
+            "interfaces":[
+                {
+                    "ipAddresses":[
+                        {"value":"127.0.0.1","version":4}
+                    ]
+                }
+            ]
+        },
+        "agentID":"19f4a61e-5e7e-e756-72f6-9a21b1d8e154"
+    },
+    "eventType":12,
+    "timestamp":1588000232
+}
