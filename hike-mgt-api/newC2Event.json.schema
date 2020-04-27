@@ -5,17 +5,11 @@
     "description": "Initial HIKE notification of C2 location and information",
     "type": "object",
 
-    "required": ["opID", "eventType", "timestamp", "eventData"],
+    "required": ["eventType", "timestamp", "eventData"],
 
     "properties": {
-        "opID": {
-            "type": "string",
-            "format": "uuid",
-            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
-        },
-        
         "eventType": {
-            "enum": [1]
+            "enum": [12]
         },
 
         "timestamp": {
@@ -27,24 +21,16 @@
             "type": "object",
             "additionalProperties": false,
 
-            "required": ["c2", "host", "agentID"],
+            "required": ["agentID", "host"],
 
             "properties": {
-                "c2": {
-                    "type": "string",
-                    "format": "uuid",
-                    "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
-                },
-                "host": {
-                    "type": "string",
-                    "format": "uuid",
-                    "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
-                },
                 "agentID": {
                     "type": "string",
                     "format": "uuid",
                     "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
                 },
+
+                "host": {"$ref": "../operations/host.json.schema"}
             }
         }
     },
