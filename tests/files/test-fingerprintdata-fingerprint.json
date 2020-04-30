@@ -1,9 +1,12 @@
 {
-    "messageType": "FINGERPRINT",
-    "fingerprintData": {
-        "fingerprintUUID": "00000000-0000-0000-0000-000000000022",
+    "data": {
+        "messageType": "FINGERPRINT_RESPONSE",
         
-        "host": {
+        "fingerprintUUID": "00000000-0000-0000-0000-000000000022",
+
+        "agentUUID": "00000000-0000-0000-0000-000000000022",
+        
+        "fingerprint": {
             "uuid": "00000000-0000-0000-0000-000000000009",
             "hostnames": ["haccs-desktop"],
             "possibleDevices": [
