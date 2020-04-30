@@ -1,6 +1,7 @@
 {
     "messageType": "FINGERPRINT_RESPONSE",
     "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
+    "agentUUID": "00000000-0000-0000-0000-000000000022",
     "fingerprint": {
         "possibleDevices": [
             {

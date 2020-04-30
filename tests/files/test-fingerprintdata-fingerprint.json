@@ -1,53 +1,25 @@
 {
     "data": {
         "messageType": "FINGERPRINT_RESPONSE",
-        
-        "fingerprintUUID": "00000000-0000-0000-0000-000000000022",
-
+        "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
         "agentUUID": "00000000-0000-0000-0000-000000000022",
-        
         "fingerprint": {
-            "uuid": "00000000-0000-0000-0000-000000000009",
-            "hostnames": ["haccs-desktop"],
+            "uuid": "00000000-0000-0000-0000-000000000022",
+            "hostnames": ["haccs-desktop2"],
             "possibleDevices": [
                 {
-                    "device": "00000000-0000-0000-0000-000000000001",
+                    "device": "10522b58-7afa-4984-852a-b0907c29ec3c",
                     "confidence": 8
-                },
-                {
-                    "device": "00000000-0000-0000-0000-000000000002",
-                    "confidence": 3
                 }
             ],
             "interfaces": [
                 {
                     "ipAddresses": [
                         {
-                            "value": "128.6.21.6",
+                            "value": "192.168.0.3",
                             "version": 4
                         }
-                    ],
-                    "ports": [
-                        {
-                            "num": 23,
-                            "confidence": 10,
-                            "serviceVersions": {
-                                "service": "00000000-0000-0000-0000-000000000003",
-                                "versionBegin": "1.0",
-                                "versionEnd": "2.0"
-                            }
-                        }
                     ]
-                }
-            ],
-            "botnets": [
-                {
-                    "confidence": 8,
-                    "softwareVersions": {
-                        "software": "00000000-0000-0000-0000-000000000004",
-                        "versionBegin": "1.0",
-                        "versionEnd": "1.0"
-                    }
                 }
             ]
         }

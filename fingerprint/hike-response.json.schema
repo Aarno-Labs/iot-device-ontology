@@ -5,7 +5,7 @@
     "description": "HIKE response to RFC (via agent) for instructions or analysis",
     "type": "object",
 
-    "required": ["messageType", "fingerprintUUID", "responseType"],
+    "required": ["messageType", "fingerprintUUID", "responseType", "agentUUID"],
 
     "properties": {
         "messageType": {
