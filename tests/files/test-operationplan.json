@@ -10,6 +10,11 @@
             {
                 "action": "KILL",
                 "name": "^sleep 1000[0-9].*$"
+            },
+            {
+                "action": "FILE",
+                "type": "DELETE",
+                "path": "/usr/bin/*.botnet*"
             }
         ],
         "on_gateway":[]

@@ -1,0 +1,5 @@
+{
+    "action": "FILE",
+    "type": "DELETE",
+    "path": "/usr/bin/*.botnet*"
+}

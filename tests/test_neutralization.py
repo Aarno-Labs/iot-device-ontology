@@ -9,3 +9,9 @@ def test_get_network_based():
         json_data = json.load(json_file)
 
         assert_valid_schema(json_data, 'operations/neutralization.json.schema')
+
+def test_get_file_based():        
+    with open('tests/files/test_file-based.json') as json_file:
+        json_data = json.load(json_file)
+
+        assert_valid_schema(json_data, 'operations/neutralization.json.schema')

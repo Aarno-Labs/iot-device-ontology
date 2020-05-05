@@ -7,11 +7,36 @@
     "properties" : {
         "action": {
             "type": "string",
-            "enum": ["KILL", "NETWORK", "REBOOT"]
+            "enum": ["KILL", "NETWORK", "REBOOT", "FILE"]
         }
     },
 
     "allOf": [
+        {
+            "if": {
+                "properties": { "action": { "const": "FILE" } }
+            },
+            "then": {
+                "additionalProperties": false,
+
+                "required": ["action", "type"],
+                
+                "properties" : {
+                    "action": {
+                        "type": "string",
+                        "enum": ["FILE"]
+                    },
+                    "type" : {
+                        "type": "string",
+                        "enum": ["DELETE"]
+                    },
+                    "path": {
+                        "description": "GLOB on which to perform action",
+                        "type": "string"
+                    }
+                }
+            }
+        },
         {
             "if": {
                 "properties": { "action": { "const": "KILL" } }
