@@ -3,6 +3,7 @@
     "eventType": 4,
     "timestamp": 1,
     "eventData": {
+        "fingerprintUUID": "04327420-0000-0000-0000-000000000020",
         "host": {
             "hostnames": ["haccs-desktop"],
             "possibleDevices": [
