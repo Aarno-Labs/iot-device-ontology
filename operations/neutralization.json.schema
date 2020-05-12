@@ -31,7 +31,7 @@
                         "enum": ["DELETE"]
                     },
                     "path": {
-                        "description": "GLOB on which to perform action",
+                        "description": "GLOB on which to perform action. Support for POSIX.2, 3.13 globs.",
                         "type": "string"
                     }
                 }
