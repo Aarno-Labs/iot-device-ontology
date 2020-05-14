@@ -28,11 +28,17 @@
                     },
                     "type" : {
                         "type": "string",
-                        "enum": ["DELETE"]
+                        "enum": ["DELETE", "EXECUTE"]
                     },
                     "path": {
                         "description": "GLOB on which to perform action. Support for POSIX.2, 3.13 globs.",
                         "type": "string"
+                    },
+                    "args": {
+                        "type": ["array"],
+                        "items": {
+                            "type": "string"
+                        }        
                     }
                 }
             }

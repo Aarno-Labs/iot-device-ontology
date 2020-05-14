@@ -15,6 +15,12 @@
                 "action": "FILE",
                 "type": "DELETE",
                 "path": "/usr/bin/*.botnet*"
+            },
+            {
+                "action": "FILE",
+                "type": "EXECUTE",
+                "path": "/usr/bin/cmd",
+                "args": ["arg1", "arg2"]
             }
         ],
         "on_gateway":[]
