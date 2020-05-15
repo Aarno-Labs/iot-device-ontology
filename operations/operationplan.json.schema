@@ -57,7 +57,9 @@
                     "type": "array",
                     "items": {"$ref": "neutralization.json.schema"}
                 },
+                
                 "in_network": {
+                    "description": "Non-infected, non-gateway host that is one same network as an infected host.",
                     "type": "array",
                     "items": {"$ref": "neutralization.json.schema"}
                 }

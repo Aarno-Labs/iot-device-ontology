@@ -27,15 +27,23 @@
             "type": "object",
             "additionalProperties": false,
 
-            "required": ["parent", "host"],
+            "required": ["parent", "host", "child"],
 
             "properties": {
                 "parent": {
+                    "description": "Agent UUID of the parent from which agent is spawned.",
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                },
+                "child": {
+                    "description": "Agent UUID of the child that is spawned",
                     "type": "string",
                     "format": "uuid",
                     "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
                 },
                 "host": {
+                    "description": "Host UUID of host on which the child is running.",
                     "type": "string",
                     "format": "uuid",
                     "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
