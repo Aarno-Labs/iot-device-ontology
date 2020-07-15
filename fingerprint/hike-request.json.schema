@@ -30,7 +30,12 @@
             "description": "Action responses that the RFC wants the server to know about in order to service this message.", 
             "type": "array",
             "items": {"$ref": "action-response.json.schema"}
-        }
+        },
+
+        "data": {
+            "description": "Un-constrained JSON data that the RFC would like the TA1 server to know for this request.", 
+            "type": "object"
+        }       
     },
 
     "additionalProperties": false
