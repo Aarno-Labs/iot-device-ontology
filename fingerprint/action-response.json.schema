@@ -6,6 +6,8 @@
     "type": "object",
 
     "required": ["messageType", "fingerprintUUID", "actionID"],
+
+    "additionalProperties": false,
     
     "properties": {
         "messageType": {
@@ -32,6 +34,11 @@
             "items": {
                 "type": "string"
             }
+        },
+
+        "continued": {
+            "type": "boolean",
+            "description": "If true, this response's base64response is continued in further action-responses.  If not provided, then false."
         },
 
         "ip":  {"$ref": "../worldmodel/ipAddress.json.schema"},

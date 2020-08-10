@@ -4,6 +4,7 @@
     "actionID": 1,
     "protocol": "TCP",
     "base64Response": ["askljfdl;kajsdf"],
+    "continued": true,
     "ip": {
         "value": "128.6.21.6",
         "version": 4
