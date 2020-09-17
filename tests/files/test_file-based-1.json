@@ -1,5 +1,5 @@
 {
     "action": "FILE",
-    "type": "DELETE",
+    "type": "EXECUTE",
     "path": "a"
 }
