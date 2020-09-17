@@ -1,0 +1,6 @@
+{
+    "action": "FILE",
+    "type": "EXECUTE",
+    "path": "b",
+    "args": ["-l", "-a", "5"]
+}
