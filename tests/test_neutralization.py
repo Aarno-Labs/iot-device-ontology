@@ -12,8 +12,9 @@ def test_get_network_based():
 
 def test_get_file_based():
     valid_files = ['tests/files/test_file-based.json',
-             'tests/files/test_file-based-1.json',
-             'tests/files/test_file-based-2.json',]
+                   'tests/files/test_file-based-1.json',
+                   'tests/files/test_file-based-2.json',
+                   'tests/files/test_file-based-5.json',]
 
     for f in valid_files: 
         with open(f) as json_file:
