@@ -2,12 +2,6 @@
     "messageType": "ACTION_RESPONSE",
     "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
     "actionID": 1,
-    "protocol": "TCP",
     "base64Response": ["askljfdl;kajsdf"],
-    "continued": true,
-    "ip": {
-        "value": "128.6.21.6",
-        "version": 4
-    },
-    "port": 23
+    "continued": true
 }

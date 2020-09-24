@@ -18,6 +18,19 @@ def assert_valid_schema(data, schema_file):
         raise e
 
 
+def assert_invalid_schema(data, schema_file):
+    """ Checks whether the given data does not the schema """
+
+    schema = _load_json_schema(schema_file)
+    try:
+        validate(data, schema)
+    except ValidationError as e:
+        return
+    
+    print("Invalidation error: Should not validate")
+    raise ValidationError("Should not validate")
+
+
 def _load_json_schema(filename):
     """ Loads the given schema file """
 

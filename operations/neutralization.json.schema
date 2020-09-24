@@ -3,6 +3,7 @@
     "$id": "neutralization.schema.json",
     "title": "HACCS Bot Neutralization",
     "description": "Bot neutralization definition",
+    "type": "object",
 
     "properties" : {
         "action": {
@@ -13,34 +14,95 @@
 
     "allOf": [
         {
+            
             "if": {
                 "properties": { "action": { "const": "FILE" } }
             },
             "then": {
-                "additionalProperties": false,
-
-                "required": ["action", "type"],
-                
-                "properties" : {
+                "properties": {
                     "action": {
                         "type": "string",
                         "enum": ["FILE"]
                     },
+                    
                     "type" : {
                         "type": "string",
                         "enum": ["DELETE", "EXECUTE"]
-                    },
-                    "path": {
-                        "description": "GLOB on which to perform action. Support for POSIX.2, 3.13 globs.",
-                        "type": "string"
-                    },
-                    "args": {
-                        "type": ["array"],
-                        "items": {
-                            "type": "string"
-                        }        
                     }
-                }
+                },
+                "allOf": [
+                    {
+                        "if": {
+                            "properties": { "type": { "const": "EXECUTE" } }
+                        },
+                        "then": {
+                            "required": ["action", "type"],
+
+                            "additionalProperties": false,
+                            
+                            "properties": {
+                                "action": {
+                                    "type": "string",
+                                    "enum": ["FILE"]
+                                },
+                                "type" : {
+                                    "type": "string",
+                                    "enum": ["EXECUTE"]
+                                },
+                                "path": {
+                                    "description": "GLOB on which to perform action. Support for POSIX.2, 3.13 globs.",
+                                    "type": "string"
+                                },
+                                "args": {
+                                    "type": ["array"],
+                                    "items": {
+                                        "type": "string"
+                                    }        
+                                },
+                                "executeFileURL" : {
+                                    "type": "string",
+                                    "description": "URL link to file to download and execute on host.  Must be reachable by TA3 C2.  If present, path must not be included.",
+                                    "format": "uri-reference"
+                                }
+                            },
+                            "oneOf": [
+                                {
+                                    "required": ["path"]
+                                },
+                                {
+                                    "required": ["executeFileURL"]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": { "type": { "const": "DELETE" } }
+                        },
+                        "then": {
+                            "additionalProperties": false,
+                            
+                            "required": ["action", "type", "path"],
+                            
+                            "properties": {
+                                "action": {
+                                    "type": "string",
+                                    "enum": ["FILE"]
+                                },
+
+                                "type" : {
+                                    "type": "string",
+                                    "enum": ["DELETE"]
+                                },
+                                "path": {
+                                    "description": "GLOB on which to perform action. Support for POSIX.2, 3.13 globs.",
+                                    "type": "string"
+                                }
+                            }
+                            
+                        }
+                    }
+                ]
             }
         },
         {
