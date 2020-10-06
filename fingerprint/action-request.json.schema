@@ -116,7 +116,7 @@
                 "additionalProperties": false,
 
                 "required": ["messageType", "fingerprintUUID", "actionID", "action", "TA",
-                             "protocol", "port", "timeoutMillisecs", "dstIP"],
+                             "protocol", "port", "timeoutMillisecs"],
                 
                 "properties" : {
                     "messageType": {
