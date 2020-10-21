@@ -15,9 +15,9 @@
         "fingerprintRequest":  {"$ref": "fingerprint-request.json.schema"},
         
         "type": {
-            "description": "Type of request. Only one type for now.",
+            "description": "Type of request. ACTIONS_REQUEST implies asking for instructions, ACTIONS_RESPONSE implies focus on resulting data",
             "type": "string",
-            "enum": ["ACTIONS_REQUEST"]
+            "enum": ["ACTIONS_REQUEST", "ACTIONS_RESPONSE"]
         },
 
         "priorActionRequests": {
