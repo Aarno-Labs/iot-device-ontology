@@ -1,0 +1,60 @@
+{
+    "fingerprintUUID": null,
+    "agentUUID": null,
+    "interfaces":[
+        {
+            "ipAddresses": [
+                {
+                "value": "192.168.1.100",
+                "version": 4
+                }
+            ]
+        }
+    ],
+    "possibleBotnets": [
+        {
+            "botnetFamily": "necurs",
+            "confidence": 0.68
+        },
+        {
+            "botnetFamily": "wannacry",
+            "confidence": 0.54
+        }
+    ],
+    "possibleDevices":[
+        {
+            "product": "mac_os_x",
+            "manufacturer": "Apple",
+            "version": null,
+            "cpe23": "",
+            "confidence": 0.5
+        },
+        {
+            "product": "ubuntu",
+            "manufacturer": "canonical",
+            "version": "20.04",
+            "cpe23": "cpe:2.3:o:canonical:ubuntu:20.04:*:*:*:*:*:*:*",
+            "confidence": 0.5
+        }
+    ],
+    "possibleServices": [
+        {
+            "port": 80,
+            "service": "httpd",
+            "protocols": [
+                "TCP",
+                "UDP"
+            ],
+            "device": {
+                "product": "ubuntu",
+                "manufacturer": "canonical",
+                "version": "20.04",
+                "cpe23": "cpe:2.3:o:canonical:ubuntu:20.04:*:*:*:*:*:*:*",
+                "confidence": 0.5
+            }
+        }
+    ],
+    "legal": false,
+    "requestId":null,
+    "network": null
+}

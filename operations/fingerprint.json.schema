@@ -25,10 +25,10 @@
                     "type": "string"
                 },
                 "version": {
-                    "type": "string"
+                    "type": ["string","null"]
                 },
                 "cpe23": {
-                    "type": "string"
+                    "type": ["string","null"]
                 },
                 "confidence":{
                     "$ref": "#/definitions/confidence"
@@ -44,17 +44,17 @@
     ], 
     "properties": {
         "fingerprintUUID": {
-            "type": "string", 
+            "type": ["string","null"], 
             "format": "uuid", 
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         }, 
         "agentUUID": {
-            "type": "string", 
+            "type": ["string","null"], 
             "format": "uuid", 
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
         "network": {
-            "type": "string", 
+            "type": ["string","null"], 
             "format": "uuid", 
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
@@ -117,7 +117,7 @@
             "type":"boolean"
         },
         "requestId": {
-            "type": "string", 
+            "type": ["string","null"], 
             "format": "uuid", 
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         }
