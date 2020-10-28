@@ -1,16 +1,10 @@
 {
     "fingerprintUUID": null,
     "agentUUID": null,
-    "interfaces":[
-        {
-            "ipAddresses": [
-                {
-                "value": "192.168.1.100",
-                "version": 4
-                }
-            ]
-        }
-    ],
+    "targetIp": {
+        "value": "192.168.1.100",
+        "version": 4
+    },
     "possibleBotnets": [
         {
             "botnetFamily": "necurs",
