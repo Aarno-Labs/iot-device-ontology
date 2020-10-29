@@ -128,6 +128,13 @@
             "type": ["string","null"], 
             "format": "uuid", 
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+        "sourced_from" : {
+            "type": "string"
+        },
+        "collected_on" : {
+            "type": "string",
+            "description" : "ISO 8601 Format"
         }
     }, 
     "additionalProperties": false
