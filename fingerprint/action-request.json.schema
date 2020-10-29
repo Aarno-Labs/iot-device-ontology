@@ -43,7 +43,7 @@
 
                     "TA": {
                         "type": "string",
-                        "enum": ["KEYW", "GATECH"]
+                        "enum": ["KEYW", "GATECH", "CYNNOVATIVE"]
                     },
 
                     "actionID": {
