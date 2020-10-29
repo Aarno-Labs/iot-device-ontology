@@ -134,6 +134,7 @@
         },
         "collected_on" : {
             "type": "string",
+            "format": "date-time",
             "description" : "ISO 8601 Format"
         }
     }, 
