@@ -1,0 +1,14 @@
+{
+    "fingerprintUUID": null,
+    "agentUUID": null,
+    "targetIp": {
+        "value": "192.168.1.1",
+        "version": 4
+    },
+    "possibleBotnets": [],
+    "possibleDevices":[],
+    "possibleServices": [],
+    "legal": false,
+    "requestId":null,
+    "network": null
+}

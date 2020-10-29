@@ -1,0 +1,128 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "fingerprint.json.schema", 
+    "title": "HACCS Fingerprint Schema", 
+    "description": "Fingerprint schema for submission to HIKE passive/active", 
+    "type": "object", 
+    "definitions": {
+        "confidence":{
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        },
+        "device": {
+            "type": "object",
+            "required": [
+                "product",
+                "manufacturer",
+                "confidence"
+            ],
+            "properties": {
+                "product":{
+                    "type": "string"
+                },
+                "manufacturer": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": ["string","null"]
+                },
+                "cpe23": {
+                    "type": ["string","null"]
+                },
+                "confidence":{
+                    "$ref": "#/definitions/confidence"
+                }
+            }
+        }
+    },
+    "required": [
+        "targetIp",
+        "possibleBotnets",
+        "possibleDevices",
+        "possibleServices"
+    ],
+    "properties": {
+        "fingerprintUUID": {
+            "type": ["string","null"], 
+            "format": "uuid", 
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        }, 
+        "agentUUID": {
+            "type": ["string","null"], 
+            "format": "uuid", 
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+        "network": {
+            "type": ["string","null"], 
+            "format": "uuid", 
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+        "targetIp": {
+            "$ref": "../worldmodel/ipAddress.json.schema"
+        },
+        "targetMac":{
+            "type": ["string", "null"],
+            "pattern": "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"
+        },
+        "possibleBotnets":{
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "botnetFamily": {
+                        "type": "string"
+                    },
+                    "confidence": {
+                        "$ref": "#/definitions/confidence"
+                    }
+                }
+            }
+        },
+        "possibleDevices": {
+            "description": "List of possible Devices",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/device"
+            }
+        },
+        "possibleServices": {
+            "description": "List of possible Services",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "port":{
+                        "type":"integer",
+                        "minimum": 0, 
+                        "maximum": 65535
+                    }, 
+                    "service":{
+                        "type": "string"
+                    },
+                    "protocols":{
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "device": {
+                        "$ref": "#/definitions/device"
+                    },
+                    "confidence":{
+                        "$ref": "#/definitions/confidence"
+                    }
+                }
+            }
+        },
+        "legal": {
+            "type":"boolean"
+        },
+        "requestId": {
+            "type": ["string","null"], 
+            "format": "uuid", 
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        }
+    }, 
+    "additionalProperties": false
+}
