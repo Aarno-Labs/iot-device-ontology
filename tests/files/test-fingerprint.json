@@ -45,7 +45,8 @@
                 "version": "20.04",
                 "cpe23": "cpe:2.3:o:canonical:ubuntu:20.04:*:*:*:*:*:*:*",
                 "confidence": 0.5
-            }
+            },
+	    "confidence": 0.5
         }
     ],
     "legal": false,

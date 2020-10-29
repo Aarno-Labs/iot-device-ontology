@@ -94,7 +94,8 @@
                 "required": [
                     "port",
                     "service",
-                    "protocols"
+                    "protocols",
+                    "confidence"
                 ],
                 "properties": {
                     "port":{
