@@ -34,7 +34,6 @@
         "fingerprintVendor": {
             "type": "string",
             "enum": [
-                "CYNNOVATIVE",
                 "GATECH",
                 "KEYW",
                 "TEST"
