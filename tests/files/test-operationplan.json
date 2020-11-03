@@ -5,6 +5,10 @@
 
     "organization": "Darpa",
 
+    "agentVendor": "TEST",
+
+    "fingerprintVendor": "TEST",
+
     "neutralizations": {
         "on_infected":[
             {
