@@ -30,6 +30,12 @@
                 "cpe23": {
                     "type": ["string","null"]
                 },
+                "isatype": {
+                    "type": ["string", "null"]
+                },
+                "abitype": {
+                    "type": ["string", "null"]
+                },
                 "confidence":{
                     "$ref": "#/definitions/confidence"
                 }
