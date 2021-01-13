@@ -8,7 +8,10 @@
     "required": [
         "opID",
         "agentVendor",
-        "fingerprintVendor"
+        "fingerprintVendor",
+        "bots",
+        "onHostIoc",
+        "onHostBda"
     ],
 
     "properties": {
@@ -21,7 +24,7 @@
             "format": "uuid",
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
-
+        
         "agentVendor": {
             "type": "string",
             "enum": [
@@ -49,6 +52,17 @@
             "type": "object"
         },
 
+        "bots": {
+            "type": "array",
+            "description": "Bots this operation is seeking to eradicate",
+            "items": {
+                "description": "Software UUID of the botnet",
+                "type": "string",
+                "format": "uuid",
+                "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+            }
+        },
+
         "networks": {
             "description": "Pre-campaign information of target networks",
             "type": "array",
@@ -65,28 +79,92 @@
                 "type": "string"
             }
         },
+
+        "onHostIoc": {
+            "description": "Indicators of compromise",
+            "type": "array",
+            "items": {
+                "description": "Each element of this array is an indicator for one bot",
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["bot", "indicators"],
+                "properties": {
+                    "bot": {
+                        "description": "Software UUID of the bot",
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                    },
+                    
+                    "indicators": {"$ref": "indicators.json.schema"}
+                }
+            }
+        },
         
         "neutralizations": {
-            "type": "object",
-            "properties": {
-                "on_infected": {
-                    "type": "array",
-                    "items": {"$ref": "neutralization.json.schema"}
-                },
-                
-                "on_gateway": {
-                    "type": "array",
-                    "items": {"$ref": "neutralization.json.schema"}
-                },
-                
-                "in_network": {
-                    "description": "Non-infected, non-gateway host that is one same network as an infected host.",
-                    "type": "array",
-                    "items": {"$ref": "neutralization.json.schema"}
-                }
-            },
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["bot", "actions"],
+                "properties": {
+                    "bot": {
+                        "description": "Software UUID of the bot",
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                    },
+                    "actions": {
+                        "type": "object",
+                        "properties": {
+                            "on_infected": {
+                                "type": "array",
+                                "items": {"$ref": "neutralization.json.schema"}
+                            },
+                            
+                            "on_gateway": {
+                                "type": "array",
+                                "items": {"$ref": "neutralization.json.schema"}
+                            },
+                            
+                            "in_network": {
+                                "description": "Non-infected, non-gateway host that is one same network as an infected host.",
+                                "type": "array",
+                                "items": {"$ref": "neutralization.json.schema"}
+                            }
+                        },
             
-            "additionalProperties": false
+                        "additionalProperties": false
+                    }
+                }
+            }
+        },
+
+        "onHostBda": {
+            "description": "Battle Damage Assessment, to be run after on host neutralization",
+            "type": "array",
+            "items": {
+                "description": "Tests of battle damage for each bot",
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["bot", "indicators"],
+                "properties": {
+                    "name": {
+                        "description": "The name of this BDA test for reporting [optional]",
+                        "type": "string"
+                    },
+
+                    "bot": {
+                        "description": "Software UUID of the bot",
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                    },
+                    
+                    "indicators": {"$ref": "indicators.json.schema"}
+                }
+            }
+
         }
     },
 

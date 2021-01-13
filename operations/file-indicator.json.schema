@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "file-indicator.schema.json",
+    "title": "HACCS Bot Indicator for IoC or BDA based on file",
+    "description": "HACCS Bot File Indicator for IoC or BDA",
+    "type": "object",
+
+    "additionalProperties": false,
+    
+    "required": ["type", "path"],
+
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": ["FILE"]
+        },
+
+        "path": {
+            "description": "GLOB to check for file existence. Support for POSIX.2, 3.13 globs. If at least one file is found, the this indicator is true.",
+            "type": "string"
+        },
+        
+        "sha256Hash": {
+            "description": "if present, at least one found file has to have this sha256 hash for this indictor to be true",
+            "type": "string"
+        }
+    }
+}

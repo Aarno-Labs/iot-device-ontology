@@ -9,28 +9,74 @@
 
     "fingerprintVendor": "TEST",
 
-    "neutralizations": {
-        "on_infected":[
-            {
-                "action": "KILL",
-                "name": "^sleep 1000[0-9].*$"
-            },
-            {
-                "action": "FILE",
-                "type": "DELETE",
-                "path": "/usr/bin/*.botnet*"
-            },
-            {
-                "action": "FILE",
-                "type": "EXECUTE",
-                "path": "/usr/bin/cmd",
-                "args": ["arg1", "arg2"]
-            }
-        ],
-        "on_gateway":[]
-    },
+    "bots": [
+        "10522b58-7afa-4984-852a-b0907c29ec3c"
+    ],
 
+    "onHostIoc": [
+        {
+            "bot": "10522b58-7afa-4984-852a-b0907c29ec3c",
+            "indicators": [
+                {
+                    "type": "PORT",
+                    "ports": [8000]
+                },
+                {
+                    "type": "FILE",
+                    "path": "/botdir/*",
+                    "sha256Hash": "deec50e08ed0f0e86caed90f44b530e9d94650726120565c2b547b4378caef5b"
+                },
+                {
+                    "type": "PROCESS",
+                    "procNameRegex": "bot.*proc"
+                }
+            ]
+        }
+    ],
     
+    "neutralizations": [
+        {
+            "bot": "10522b58-7afa-4984-852a-b0907c29ec3c",
+            "actions": {
+                "on_infected":[
+                    {
+                        "action": "KILL",
+                        "name": "^sleep 1000[0-9].*$"
+                    },
+                    {
+                        "action": "FILE",
+                        "type": "DELETE",
+                        "path": "/usr/bin/*.botnet*"
+                    },
+                    {
+                        "action": "FILE",
+                        "type": "EXECUTE",
+                        "path": "/usr/bin/cmd",
+                        "args": ["arg1", "arg2"]
+                    }
+                ],
+                "on_gateway":[]
+            }
+        }
+    ],
+
+    "onHostBda": [
+        {
+            "name": "SomeBot Process running and port open",
+            "bot": "10522b58-7afa-4984-852a-b0907c29ec3c",
+            "indicators": [
+                {
+                    "type": "PORT",
+                    "ports": [8000]
+                },
+                {
+                    "type": "PROCESS",
+                    "procNameRegex": "bot.*proc"
+                }
+            ]
+        }
+    ],
+
     "networks": [
         {
             "uuid": "00000000-0000-0000-0000-000000000009",
