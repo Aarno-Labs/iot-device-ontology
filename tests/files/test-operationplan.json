@@ -10,7 +10,10 @@
     "fingerprintVendor": "TEST",
 
     "bots": [
-        "10522b58-7afa-4984-852a-b0907c29ec3c"
+        {
+            "software": "10522b58-7afa-4984-852a-b0907c29ec3c",
+            "knownVulnerableDevices": ["10522b58-7afa-4984-852a-b0907c29ec3f"]
+        }
     ],
 
     "onHostIoc": [
@@ -19,7 +22,12 @@
             "indicators": [
                 {
                     "type": "PORT",
-                    "ports": [8000]
+                    "ports": [
+                        {
+                            "protocol": "TCP",
+                            "portNums": [8000]
+                        }
+                    ]
                 },
                 {
                     "type": "FILE",
@@ -62,12 +70,16 @@
 
     "onHostBda": [
         {
-            "name": "SomeBot Process running and port open",
             "bot": "10522b58-7afa-4984-852a-b0907c29ec3c",
             "indicators": [
                 {
                     "type": "PORT",
-                    "ports": [8000]
+                    "ports": [
+                        {
+                            "protocol": "TCP",
+                            "portNums": [8000]
+                        }
+                    ]
                 },
                 {
                     "type": "PROCESS",
@@ -76,7 +88,6 @@
             ]
         }
     ],
-
     "networks": [
         {
             "uuid": "00000000-0000-0000-0000-000000000009",

@@ -56,10 +56,26 @@
             "type": "array",
             "description": "Bots this operation is seeking to eradicate",
             "items": {
-                "description": "Software UUID of the botnet",
-                "type": "string",
-                "format": "uuid",
-                "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["software"],
+                "properties": {
+                    "software": {
+                        "description": "Software UUID of the botnet",
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                    },
+                    "knownVulnerableDevices": {
+                        "type": "array",
+                        "items": {
+                            "description": "Device UUID of the known vulnerable device",
+                            "type": "string",
+                            "format": "uuid",
+                            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                        }
+                    }
+                }
             }
         },
 
@@ -149,11 +165,6 @@
                 "additionalProperties": false,
                 "required": ["bot", "indicators"],
                 "properties": {
-                    "name": {
-                        "description": "The name of this BDA test for reporting [optional]",
-                        "type": "string"
-                    },
-
                     "bot": {
                         "description": "Software UUID of the bot",
                         "type": "string",

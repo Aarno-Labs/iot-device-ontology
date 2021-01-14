@@ -19,9 +19,24 @@
             "description": "Array of ports that ALL must be open for this to be true",
             "type": "array",
             "items": {
-                "type": "integer",
-                "minimum": 0,
-                "maximum": 65535
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["protocol", "portNums"],
+                "properties": {
+                    "protocol": {
+                        "type": "string",
+                        "enum": ["TCP", "UDP"]
+                    },
+                    "portNums": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 65535
+                        },
+                        "minItems": 1
+                    }
+                }
             },
             "minItems": 1,
             "uniqueItems": true
