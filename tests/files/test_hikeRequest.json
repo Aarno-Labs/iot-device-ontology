@@ -10,6 +10,7 @@
             "value": "128.6.21.6",
             "version": 4
         },
+        "targetMAC": "0c:c4:7a:91:9a:37",
         "gatewayIP": {
             "value": "128.6.21.7",
             "version": 4
