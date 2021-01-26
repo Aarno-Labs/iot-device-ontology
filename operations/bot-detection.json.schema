@@ -14,29 +14,33 @@
             "minimum": 0,
             "maximum": 10
         },
-        "botFamily": {
-            "type": "object",
-            "requiredProperties": ["botUUID", "familyConfidence", "numInstances"],
-            "properties": {
-                "botUUID": {
-                    "description": "software UUID of bot infection family",
-                    "type": "string",
-                    "format": "uuid",
-                    "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        "botFamilies": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "requiredProperties": ["botUUID", "familyConfidence", "numInstances"],
+                "properties": {
+                    "botUUID": {
+                        "description": "software UUID of bot infection family",
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+                    },
+                    "familyConfidence": {
+                        "description": "confidence for detection of this bot family",
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 10
+                    },
+                    "numInstances": {
+                        "description": "Number of instances of bot family detected behind IP",
+                        "type": "integer",
+                        "minimum": 1
+                    }
                 },
-                "familyConfidence": {
-                    "description": "confidence for detection of this bot family",
-                    "type": "integer",
-                    "minimum": 0,
-                    "maximum": 10
-                },
-                "numInstances": {
-                    "description": "Number of instances of bot family detected behind IP",
-                    "type": "integer",
-                    "minimum": 1
-                }
+                "additionalProperties": false
             },
-            "additionalProperties": false
+            "uniqueItems": true
         }
     },
     "additionalProperties": false

@@ -8,11 +8,18 @@
                 "version": 4
             },
             "compromiseConfidence": 9,
-            "botFamily": {
-                "botUUID": "00000000-0000-0000-0000-000000000010",
-                "familyConfidence": 8,
-                "numInstances": 1
-            }
+            "botFamilies": [
+                {
+                    "botUUID": "00000000-0000-0000-0000-000000000010",
+                    "familyConfidence": 8,
+                    "numInstances": 1
+                },
+                {
+                    "botUUID": "00000000-0000-0000-0000-000000000011",
+                    "familyConfidence": 2,
+                    "numInstances": 1
+                }
+            ]
         },
         {
             "ipAddress": {
@@ -20,11 +27,13 @@
                 "version": 4
             },
             "compromiseConfidence": 8,
-            "botFamily": {
-                "botUUID": "00000000-0000-0000-0000-000000000010",
-                "familyConfidence": 7,
-                "numInstances": 2
-            }
+            "botFamilies": [
+                {
+                    "botUUID": "00000000-0000-0000-0000-000000000010",
+                    "familyConfidence": 7,
+                    "numInstances": 2
+                }
+            ]
         }
     ]
 }
