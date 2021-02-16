@@ -1,0 +1,39 @@
+{
+    "messageType": "BOT_DETECTION_RESPONSE",
+    "detectionUUID": "00000000-0000-0000-0000-0000000000AA",
+    "detections": [
+        {
+            "ipAddress": {
+                "value": "128.6.21.6",
+                "version": 4
+            },
+            "compromiseConfidence": 9,
+            "botFamilies": [
+                {
+                    "botUUID": "00000000-0000-0000-0000-000000000010",
+                    "familyConfidence": 8,
+                    "numInstances": 1
+                },
+                {
+                    "botUUID": "00000000-0000-0000-0000-000000000011",
+                    "familyConfidence": 2,
+                    "numInstances": 1
+                }
+            ]
+        },
+        {
+            "ipAddress": {
+                "value": "128.6.21.8",
+                "version": 4
+            },
+            "compromiseConfidence": 8,
+            "botFamilies": [
+                {
+                    "botUUID": "00000000-0000-0000-0000-000000000010",
+                    "familyConfidence": 7,
+                    "numInstances": 2
+                }
+            ]
+        }
+    ]
+}

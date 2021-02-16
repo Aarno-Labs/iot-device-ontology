@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "bot-detection-response.json.schema",
+    "title": "HACCS Bot Detection Response",
+    "description": "HACCS Bot Detection Response",
+    "type": "object",
+
+    "required": ["messageType", "detectionUUID", "detections"],
+    
+    "properties": {
+        "messageType": {
+            "enum": ["BOT_DETECTION_RESPONSE"]
+        },
+
+        "detectionUUID": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+
+        "detections": {
+            "type": "array",
+            "items": {"$ref": "../operations/bot-detection.json.schema"}
+        },
+
+        "issues": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": ["INSUFFICIENT_DURATION", "NEED_PASSIVE"]
+            }
+        }
+    },
+    
+    "additionalProperties": false
+}

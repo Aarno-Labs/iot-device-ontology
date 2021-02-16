@@ -1,0 +1,77 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "bot-detection-request.json.schema",
+    "title": "HACCS Bot Detection Request from Agent to RFC",
+    "description": "HACCS Bot Detection Request from Agent to RFC",
+    "type": "object",
+
+    "required": ["messageType", "agentUUID", "detectionUUID", "detectionMethods",
+                 "targets", "networkUUID", "maxDurationSec"],
+    
+    "properties": {
+        "messageType": {
+            "enum": ["BOT_DETECTION_REQUEST"]
+        },
+        
+        "agentUUID": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+
+        "networkUUID": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+
+        "detectionUUID": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+
+        "botsToDetect": {
+            "description": "List of software UUIDs for bots to detect, optional",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "format": "uuid",
+                "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+        },
+       
+        "detectionMethods": {
+            "type": "array",
+            "items": {
+                "enum": ["ACTIVE", "PASSIVE"]
+            },
+            "uniqueItems": true
+        },
+
+        "maxDurationSec": {
+            "description": "The maximum duration the agent wants for this detection.",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+
+        "targets": {
+            "type": "array",
+            "items": {
+                "oneof": [
+                    {"$ref": "../worldmodel/ipAddress.json.schema"},
+                    {
+                        "type": "string",
+                        "enum": ["ANY"]
+                    }
+                ]
+            },
+            "uniqueItems": true,
+            "minItems": 1
+        },
+    
+        "additionalProperties": false
+    }
+}
