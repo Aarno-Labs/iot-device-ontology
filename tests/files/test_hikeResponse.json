@@ -1,6 +1,6 @@
 {
     "messageType": "HIKE_RESPONSE",
-    "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
+    "sessionUUID": "00000000-0000-0000-0000-0000000000AA",
     "agentUUID": "00000000-0000-0000-0000-0000000000A0",
     
     "responseType": "ACTIONS_RESPONSE",
@@ -8,7 +8,7 @@
     "actionsToPerform": [
         {
             "messageType": "ACTION_REQUEST",
-            "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
+            "sessionUUID": "00000000-0000-0000-0000-000000000004",
             "actionID": 1,
             "action": "ACTIVE",
             "TA": "GATECH",

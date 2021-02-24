@@ -5,14 +5,20 @@
     "description": "HIKE request from RFC to agent for instructions or analysis",
     "type": "object",
 
-    "required": ["messageType", "fingerprintRequest", "type"],
+    "required": ["messageType", "sessionRequest", "type"],
 
     "properties": {
         "messageType": {
             "enum": ["HIKE_REQUEST"]
         },
         
-        "fingerprintRequest":  {"$ref": "fingerprint-request.json.schema"},
+        "sessionRequest": {
+            "description": "The associated fingerprint or bot detection request", 
+            "oneOf": [
+                {"$ref": "fingerprint-request.json.schema"},
+                {"$ref": "bot-detection-request.json.schema"}
+            ]
+        },
         
         "type": {
             "description": "Type of request. ACTIONS_REQUEST implies asking for instructions, ACTIONS_RESPONSE implies focus on resulting data",

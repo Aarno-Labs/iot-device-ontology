@@ -1,21 +1,25 @@
 {
     "messageType": "HIKE_REQUEST",
     "sessionRequest": {
-        "messageType": "FINGERPRINT_REQUEST",
-        "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
+        "messageType": "BOT_DETECTION_REQUEST",
+        "detectionUUID": "00000000-0000-0000-0000-0000000000AA",
         "agentUUID": "00000000-0000-0000-0000-0000000000A0",
         "networkUUID": "00000000-0000-0000-0000-0000000000A0",
-        "fingerprintMethods": ["ACTIVE", "PASSIVE"],
-        "targetIP": {
-            "value": "128.6.21.6",
-            "version": 4
-        },
-        "targetMAC": "0c:c4:7a:91:9a:37",
-        "gatewayIP": {
-            "value": "128.6.21.7",
-            "version": 4
-        },
-        "gatewayMAC": "0c:c4:7a:91:9a:38"
+        "detectionMethods": ["ACTIVE", "PASSIVE"],
+        "maxDurationSec": 500,
+        "botsToDetect": ["00000000-0000-0000-0000-0000000000A0",
+                         "00000000-0000-0000-0000-0000000000A1"],
+        "targets": [
+            "ANY",
+            {
+                "value": "128.6.21.7",
+                "version": 4
+            },
+            {
+                "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                "version": 4
+            }
+        ]
     },
 
     "type": "ACTIONS_REQUEST",

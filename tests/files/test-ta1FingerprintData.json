@@ -5,7 +5,7 @@
     "hikeMessageUUID": "00000000-0000-0000-0000-000000000AAA",
     "eventData": {
         "messageType": "HIKE_REQUEST",
-        "fingerprintRequest": {
+        "sessionRequest": {
             "messageType": "FINGERPRINT_REQUEST",
             "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
             "networkUUID": "00000000-0000-0000-0000-0000000000A0",
@@ -28,7 +28,7 @@
         "priorActionRequests": [
             {
                 "messageType": "ACTION_REQUEST",
-                "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
+                "sessionUUID": "00000000-0000-0000-0000-000000000004",
                 "actionID": 1,
                 "action": "ACTIVE",
                 "protocol": "UPNP",
@@ -46,7 +46,7 @@
         "priorActionResponses": [
             {
                 "messageType": "ACTION_RESPONSE",
-                "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
+                "sessionUUID": "00000000-0000-0000-0000-000000000004",
                 "actionID": 1,
                 "base64Response": ["askljfdl;kajsdf"]
             }

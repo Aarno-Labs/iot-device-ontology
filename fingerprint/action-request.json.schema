@@ -22,7 +22,7 @@
             "then": {
                 "additionalProperties": false,
 
-                "required": ["messageType", "fingerprintUUID", "actionID", "action", "TA"],
+                "required": ["messageType", "sessionUUID", "actionID", "action", "TA"],
 
                 "anyOf": [
                     { "required":
@@ -50,7 +50,7 @@
                         "type": "integer"
                     },
 
-                    "fingerprintUUID": {
+                    "sessionUUID": {
                         "type": "string",
                         "format": "uuid",
                         "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
@@ -115,7 +115,7 @@
             "then": {
                 "additionalProperties": false,
 
-                "required": ["messageType", "fingerprintUUID", "actionID", "action", "TA",
+                "required": ["messageType", "sessionUUID", "actionID", "action", "TA",
                              "protocol", "port", "timeoutMillisecs"],
                 
                 "properties" : {
@@ -137,7 +137,7 @@
                         "type": "integer"
                     },
 
-                    "fingerprintUUID": {
+                    "sessionUUID": {
                         "type": "string",
                         "format": "uuid",
                         "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"

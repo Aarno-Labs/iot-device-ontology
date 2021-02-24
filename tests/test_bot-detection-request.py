@@ -1,5 +1,3 @@
-# tests/test_fingerprintRequest.py
-
 import json
 from support.assertions import assert_valid_schema
 
