@@ -4,4 +4,6 @@ stages:
 test:
   stage: test
   script:
+  - python --version
+  - pip install -r requirements.txt
   - pytest tests/*.py
