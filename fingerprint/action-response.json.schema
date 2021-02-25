@@ -5,7 +5,7 @@
     "description": "Agent Response for network action to RFC",
     "type": "object",
 
-    "required": ["messageType", "fingerprintUUID", "actionID"],
+    "required": ["messageType", "sessionUUID", "actionID"],
 
     "additionalProperties": false,
     
@@ -14,7 +14,7 @@
             "enum": ["ACTION_RESPONSE"]
         },
 
-        "fingerprintUUID": {
+        "sessionUUID": {
             "type": "string",
             "format": "uuid",
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"

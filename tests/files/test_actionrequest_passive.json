@@ -1,6 +1,6 @@
 {
     "messageType": "ACTION_REQUEST",
-    "fingerprintUUID": "00000000-0000-0000-0000-000000000004",
+    "sessionUUID": "00000000-0000-0000-0000-000000000004",
     "actionID": 1,
     "action": "PASSIVE",
     "TA": "GATECH",

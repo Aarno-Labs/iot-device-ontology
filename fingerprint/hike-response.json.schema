@@ -5,14 +5,14 @@
     "description": "HIKE response to RFC (via agent) for instructions or analysis",
     "type": "object",
 
-    "required": ["messageType", "fingerprintUUID", "responseType", "agentUUID"],
+    "required": ["messageType", "sessionUUID", "responseType", "agentUUID"],
 
     "properties": {
         "messageType": {
             "enum": ["HIKE_RESPONSE"]
         },
         
-        "fingerprintUUID": {
+        "sessionUUID": {
             "type": "string",
             "format": "uuid",
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
