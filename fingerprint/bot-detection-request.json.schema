@@ -6,7 +6,7 @@
     "type": "object",
 
     "required": ["messageType", "agentUUID", "detectionUUID", "detectionMethods",
-                 "targets", "networkUUID", "maxDurationSec"],
+                 "targets", "networkUUID", "maxDurationSec", "maxAvailMemKB"],
     
     "properties": {
         "messageType": {
@@ -53,6 +53,12 @@
 
         "maxDurationSec": {
             "description": "The maximum duration the agent wants for this detection.",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+
+        "maxAvailMemKB": {
+            "description": "The maximum total memory in KB that the RFC can use during the session.",
             "type": "integer",
             "exclusiveMinimum": 0
         },

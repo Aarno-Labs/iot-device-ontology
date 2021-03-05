@@ -4,6 +4,7 @@
     "agentUUID": "00000000-0000-0000-0000-0000000000A0",
     "networkUUID": "00000000-0000-0000-0000-0000000000A0",
     "detectionMethods": ["ACTIVE", "PASSIVE"],
+    "maxAvailMemKB": 512,
     "maxDurationSec": 500,
     "botsToDetect": ["00000000-0000-0000-0000-0000000000A0",
                      "00000000-0000-0000-0000-0000000000A1"],
