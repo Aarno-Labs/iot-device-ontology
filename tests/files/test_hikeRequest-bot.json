@@ -7,6 +7,7 @@
         "networkUUID": "00000000-0000-0000-0000-0000000000A0",
         "detectionMethods": ["ACTIVE", "PASSIVE"],
         "maxDurationSec": 500,
+        "maxAvailMemKB": 12245,
         "botsToDetect": ["00000000-0000-0000-0000-0000000000A0",
                          "00000000-0000-0000-0000-0000000000A1"],
         "targets": [
