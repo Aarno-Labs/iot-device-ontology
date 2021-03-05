@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "port-indicator.schema.json",
+    "title": "HACCS Bot Indicator for IoC or BDA based on Port",
+    "description": "HACCS Bot Port name indicator for IoC or BDA",
+    "type": "object",
+
+    "additionalProperties": false,
+    
+    "required": ["type", "ports"],
+
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": ["PORT"]
+        },
+        
+        "ports": {
+            "description": "Array of ports that ALL must be open for this to be true",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["protocol", "portNums"],
+                "properties": {
+                    "protocol": {
+                        "type": "string",
+                        "enum": ["TCP", "UDP"]
+                    },
+                    "portNums": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 65535
+                        },
+                        "minItems": 1
+                    }
+                }
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    }
+}

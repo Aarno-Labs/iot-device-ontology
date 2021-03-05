@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "process-indicator.schema.json",
+    "title": "HACCS Bot Indicator for IoC or BDA based on Process",
+    "description": "HACCS Bot Process name indicator for IoC or BDA",
+    "type": "object",
+
+    "additionalProperties": false,
+    
+    "required": ["type", "procNameRegex"],
+
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": ["PROCESS"]
+        },
+        
+        "procNameRegex": {
+            "description": "Regular expression of the process name to match",
+            "type": "string"
+        }
+    }
+}
