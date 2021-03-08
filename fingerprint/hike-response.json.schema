@@ -26,8 +26,7 @@
 
         "responseType": {
             "description": "Type of response. Only one type for now.",
-            "type": "string",
-            "enum": ["ACTIONS_RESPONSE"]
+            "type": "string"
         },
 
         "actionsToPerform": {
