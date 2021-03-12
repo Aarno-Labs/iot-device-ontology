@@ -19,7 +19,6 @@
                 "description": "UNIX Epoch Time"
             },
             "eventData": {"$ref": "../fingerprint/bot-detection-response.json.schema"}
-        
         },
     "additionalProperties": false
 }
