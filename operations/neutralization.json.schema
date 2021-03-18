@@ -36,6 +36,8 @@
                             "properties": { "type": { "const": "EXECUTE" } }
                         },
                         "then": {
+                            "description": "Execute a file at a given path or URL, with the provided arguments.  A shell is not guaranteed.",   
+
                             "required": ["action", "type"],
 
                             "additionalProperties": false,
@@ -50,7 +52,7 @@
                                     "enum": ["EXECUTE"]
                                 },
                                 "path": {
-                                    "description": "GLOB on which to perform action. Support for POSIX.2, 3.13 globs.",
+                                    "description": "path of the executable; a PATH is not guaranteed to be defined.",
                                     "type": "string"
                                 },
                                 "args": {
