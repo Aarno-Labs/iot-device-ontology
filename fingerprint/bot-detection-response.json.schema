@@ -5,7 +5,7 @@
     "description": "HACCS Bot Detection Response",
     "type": "object",
 
-    "required": ["messageType", "detectionUUID", "detections"],
+    "required": ["messageType", "agentUUID", "detectionUUID", "detections"],
     
     "properties": {
         "messageType": {
@@ -13,6 +13,12 @@
         },
 
         "detectionUUID": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+
+        "agentUUID": {
             "type": "string",
             "format": "uuid",
             "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
