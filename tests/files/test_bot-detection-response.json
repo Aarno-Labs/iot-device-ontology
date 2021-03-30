@@ -1,5 +1,6 @@
 {
     "messageType": "BOT_DETECTION_RESPONSE",
+    "agentUUID": "00000000-0000-0000-0000-0000000000AB",
     "detectionUUID": "00000000-0000-0000-0000-0000000000AA",
     "detections": [
         {
