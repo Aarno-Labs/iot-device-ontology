@@ -4,6 +4,7 @@
     "timestamp": 1234567,
     "eventData": {
         "messageType": "BOT_DETECTION_RESPONSE",
+        "opID": "00000000-0000-0000-0000-0000000000AA",
         "detectionUUID": "00000000-0000-0000-0000-0000000000AA",
         "agentUUID": "00000000-0000-0000-0000-0000000000AB",
         "detections": [

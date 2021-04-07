@@ -5,11 +5,17 @@
     "description": "HACCS Fingerprint Response from RFC or HIKE to Agent",
     "type": "object",
 
-    "required": ["messageType", "agentUUID", "fingerprintUUID", "fingerprint"],
+    "required": ["messageType", "agentUUID", "fingerprintUUID", "fingerprint", "opID"],
 
     "properties": {
         "messageType": {
             "enum": ["FINGERPRINT_RESPONSE"]
+        },
+
+        "opID": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
         },
         
         "fingerprintUUID": {

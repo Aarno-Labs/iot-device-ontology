@@ -1,7 +1,9 @@
 {
     "messageType": "HIKE_REQUEST",
+    "opID": "00000000-0000-0000-0000-0000000000AA",
     "sessionRequest": {
         "messageType": "FINGERPRINT_REQUEST",
+        "opID": "00000000-0000-0000-0000-0000000000AA",
         "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
         "agentUUID": "00000000-0000-0000-0000-0000000000A0",
         "networkUUID": "00000000-0000-0000-0000-0000000000A0",

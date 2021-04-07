@@ -5,8 +5,10 @@
     "hikeMessageUUID": "00000000-0000-0000-0000-000000000AAA",
     "eventData": {
         "messageType": "HIKE_REQUEST",
+        "opID": "00000000-0000-0000-0000-0000000000AA",
         "sessionRequest": {
             "messageType": "FINGERPRINT_REQUEST",
+            "opID": "00000000-0000-0000-0000-0000000000AA",
             "fingerprintUUID": "00000000-0000-0000-0000-0000000000AA",
             "networkUUID": "00000000-0000-0000-0000-0000000000A0",
             "agentUUID": "00000000-0000-0000-0000-0000000000A0",

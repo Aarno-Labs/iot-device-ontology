@@ -5,13 +5,19 @@
     "description": "HIKE request from RFC to agent for instructions or analysis",
     "type": "object",
 
-    "required": ["messageType", "sessionRequest", "type"],
+    "required": ["messageType", "sessionRequest", "type", "opID"],
 
     "properties": {
         "messageType": {
             "enum": ["HIKE_REQUEST"]
         },
-        
+
+        "opID": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+
         "sessionRequest": {
             "description": "The associated fingerprint or bot detection request", 
             "oneOf": [

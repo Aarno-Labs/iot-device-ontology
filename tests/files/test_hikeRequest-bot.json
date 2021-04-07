@@ -1,5 +1,6 @@
 {
     "messageType": "HIKE_REQUEST",
+    "opID": "00000000-0000-0000-0000-0000000000AA",
     "sessionRequest": {
         "messageType": "BOT_DETECTION_REQUEST",
         "opID": "00000000-0000-0000-0000-0000000000A9",
