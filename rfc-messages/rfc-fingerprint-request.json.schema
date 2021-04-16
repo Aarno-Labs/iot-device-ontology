@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "fingerprint-request.json.schema",
+    "$id": "rfc-fingerprint-request.json.schema",
     "title": "HACCS Fingerprint Request from Agent to RFC",
     "description": "HACCS Fingerprint Request from Agent to RFC",
     "type": "object",
