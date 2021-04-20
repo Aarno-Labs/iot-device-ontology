@@ -32,8 +32,8 @@
         
         "eventData": {
             "oneOf": [
-                {"$ref": "../fingerprint/hike-request.json.schema"},
-                {"$ref": "../fingerprint/fingerprint-request.json.schema"}
+                {"$ref": "../rfc-messages/hike-request.json.schema"},
+                {"$ref": "../rfc-messages/rfc-fingerprint-request.json.schema"}
             ]
         }
     },

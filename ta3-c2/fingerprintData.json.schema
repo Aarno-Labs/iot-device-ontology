@@ -20,9 +20,9 @@
         "data": {
             "description": "Payload for Agent C2", 
             "oneOf": [
-                {"$ref": "../fingerprint/hike-response.json.schema"},
-                {"$ref": "../fingerprint/fingerprint-response.json.schema"},
-                {"$ref": "../fingerprint/bot-detection-response.json.schema"}                
+                {"$ref": "../rfc-messages/hike-response.json.schema"},
+                {"$ref": "../rfc-messages/rfc-fingerprint-response.json.schema"},
+                {"$ref": "../rfc-messages/bot-detection-response.json.schema"}                
             ]
         }
     }

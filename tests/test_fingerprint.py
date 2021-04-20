@@ -8,7 +8,7 @@ def test_get_fingerprint0():
         json_data = json.load(json_file)
 
         assert_valid_schema(json_data,
-                            'operations/fingerprint.json.schema')
+                            'operations/hike-fingerprint.json.schema')
 
 
 def test_get_fingerprint1():
@@ -16,4 +16,4 @@ def test_get_fingerprint1():
         json_data = json.load(json_file)
 
         assert_valid_schema(json_data,
-                            'operations/fingerprint.json.schema')
+                            'operations/hike-fingerprint.json.schema')
