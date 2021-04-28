@@ -1,6 +1,7 @@
 {
     "messageType": "HIKE_REQUEST",
     "opID": "00000000-0000-0000-0000-0000000000AA",
+    "TA": "GATECH",
     "sessionRequest": {
         "messageType": "BOT_DETECTION_REQUEST",
         "opID": "00000000-0000-0000-0000-0000000000A9",
