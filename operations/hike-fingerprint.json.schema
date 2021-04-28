@@ -38,6 +38,12 @@
                 },
                 "confidence":{
                     "$ref": "#/definitions/confidence"
+                },
+                "detectionMethod":{
+                    "type": ["string", "null"]
+                },
+                "aggregateConfidence":{
+                    "$ref": "#/definitions/confidence"
                 }
             }
         }
@@ -77,6 +83,9 @@
         "targetIp": {
             "$ref": "../worldmodel/ipAddress.json.schema"
         },
+        "geoLocation":{
+            "type":["string","null"]
+        },
         "targetMac":{
             "type": ["string", "null"],
             "pattern": "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"
@@ -90,6 +99,18 @@
                         "type": "string"
                     },
                     "confidence": {
+                        "$ref": "#/definitions/confidence"
+                    },
+                    "detectionMethod":{
+                        "type": "string"
+                    },
+                    "c2Infrastructure":{
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "aggregateConfidence":{
                         "$ref": "#/definitions/confidence"
                     }
                 }
@@ -132,6 +153,9 @@
                         "$ref": "#/definitions/device"
                     },
                     "confidence":{
+                        "$ref": "#/definitions/confidence"
+                    },
+                    "aggregateConfidence":{
                         "$ref": "#/definitions/confidence"
                     }
                 }
