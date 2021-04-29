@@ -39,7 +39,8 @@
             "enum": [
                 "GATECH",
                 "KEYW",
-                "TEST"
+                "TEST",
+                "ANY"
             ]
         },
 
