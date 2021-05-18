@@ -19,7 +19,7 @@
         },
         "TA": {
             "type": "string",
-            "enum": ["KEYW", "GATECH", "CYNNOVATIVE"]
+            "enum": ["KEYW", "GATECH", "CYNNOVATIVE", "TEST"]
         },
         "sessionRequest": {
             "description": "The associated fingerprint or bot detection request", 
