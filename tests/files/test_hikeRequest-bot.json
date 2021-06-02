@@ -13,8 +13,8 @@
         "maxAvailMemKB": 12245,
         "botsToDetect": ["00000000-0000-0000-0000-0000000000A0",
                          "00000000-0000-0000-0000-0000000000A1"],
+        "detectOnlyTargetList": true,
         "targets": [
-            "ANY",
             {
                 "value": "128.6.21.7",
                 "version": 4
