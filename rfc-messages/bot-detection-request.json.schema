@@ -6,8 +6,11 @@
     "type": "object",
 
     "required": ["messageType", "opID", "agentUUID", "detectionUUID", "detectionMethods",
-                 "targets", "networkUUID", "maxDurationSec", "maxAvailMemKB"],
-    
+                 "targets", "networkUUID", "maxDurationSec", "maxAvailMemKB",
+                 "detectOnlyTargetList"],
+
+    "additionalProperties": false,
+
     "properties": {
         "messageType": {
             "enum": ["BOT_DETECTION_REQUEST"]
@@ -69,21 +72,16 @@
             "exclusiveMinimum": 0
         },
 
+        "detectOnlyTargetList": {
+            "description": "If true, then the agent wants the RFC to detect bots only on the target list. If false, the RFC is free to detect and report on any host.",
+            "type": "boolean"
+        },
+
         "targets": {
             "type": "array",
-            "items": {
-                "oneof": [
-                    {"$ref": "../worldmodel/ipAddress.json.schema"},
-                    {
-                        "type": "string",
-                        "enum": ["ANY"]
-                    }
-                ]
-            },
+            "items": {"$ref": "../worldmodel/ipAddress.json.schema"},
             "uniqueItems": true,
             "minItems": 1
-        },
-    
-        "additionalProperties": false
+        }
     }
 }
