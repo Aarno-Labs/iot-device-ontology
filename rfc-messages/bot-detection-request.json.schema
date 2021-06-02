@@ -8,7 +8,9 @@
     "required": ["messageType", "opID", "agentUUID", "detectionUUID", "detectionMethods",
                  "targets", "networkUUID", "maxDurationSec", "maxAvailMemKB",
                  "detectOnlyTargetList"],
-    
+
+    "additionalProperties": false,
+
     "properties": {
         "messageType": {
             "enum": ["BOT_DETECTION_REQUEST"]
@@ -80,8 +82,6 @@
             "items": {"$ref": "../worldmodel/ipAddress.json.schema"},
             "uniqueItems": true,
             "minItems": 1
-        },
-    
-        "additionalProperties": false
+        }
     }
 }
