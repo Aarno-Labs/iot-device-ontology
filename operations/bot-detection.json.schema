@@ -50,6 +50,12 @@
                 "additionalProperties": false
             },
             "uniqueItems": true
+        },
+        "source":{
+            "type": "string"
+        },
+        "indicatorOfCompromise":{
+            "type": "string"
         }
     },
     "additionalProperties": false
