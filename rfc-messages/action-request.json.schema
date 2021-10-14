@@ -145,7 +145,7 @@
                     
                     "protocol": {
                         "type": "string",
-                        "enum": ["MDNS", "UPNP", "TCP", "UDP"]
+                        "enum": ["MDNS", "UPNP", "TCP", "UDP", "TLS"]
                     },
 
                     "dstIP":  {"$ref": "../worldmodel/ipAddress.json.schema"},
