@@ -37,6 +37,7 @@
         "fingerprintVendor": {
             "type": "string",
             "enum": [
+                "AARNO",
                 "GATECH",
                 "KEYW",
                 "TEST",
