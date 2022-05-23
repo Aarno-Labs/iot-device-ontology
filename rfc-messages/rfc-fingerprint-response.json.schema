@@ -13,7 +13,7 @@
         },
         "TA": {
             "type": "string",
-            "enum": ["KEYW", "GATECH", "CYNNOVATIVE", "TEST"]
+            "enum": ["KEYW", "GATECH", "CYNNOVATIVE", "TEST", "AARNO"]
         },
         "opID": {
             "type": "string",
