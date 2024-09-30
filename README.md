@@ -1,4 +1,15 @@
-# HACCS JSON Schemas
+# Aarno Labs' HACCS Operational Ontology
+
+This repository includes the operational ontology created by Aarno
+Labs and employed during DARPA's HACCS program to coordinate
+operations among the performers.
+
+The ontology is broken up into three parts (see subdirectories):
+
+1. World model: devices, components, software, services, bots
+1. Operational: bot detections, network intelligence, hosts, running
+   processes, etc.
+1. Communication messages: Hike communication messages
 
 ## Requirements
 
